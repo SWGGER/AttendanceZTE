@@ -1,15 +1,13 @@
 server:
-  port: 9000
+  port: 8050
 spring:
   application:
     name: gateway-service
   cloud:
-    #open or close  gateway
     gateway:
       discovery:
         locator:
           enabled: true
-      #go where to peizhi
       routes:
       - id: my-user-service
         uri: lb://user-service

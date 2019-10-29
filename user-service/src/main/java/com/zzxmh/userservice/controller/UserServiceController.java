@@ -8,7 +8,7 @@ import java.util.Map;
 
 @RestController
 public class UserServiceController {
-    @RequestMapping("userservice")
+    @RequestMapping("/userservice")
     public Object userservice(){
         Map<String,Object> map=new HashMap<>();
         map.put("code",0);
