@@ -1,0 +1,31 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    #open or close  gateway
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      #go where to peizhi
+#      routes:
+#      - id: my-user-service
+#        uri: lb://user-service
+#        predicates:
+#        - Path=/userApi/**
+#        filters:
+#        - StripPrefix=1
+#      - id: my-data-service
+#        uri: lb://data-service
+#        predicates:
+#        - Path=/dataApi/**
+#        filters:
+#        - StripPrefix=1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
