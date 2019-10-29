@@ -1,0 +1,14 @@
+2019/10/29-10:43 [main] INFO  com.zzxmh.userservice.UserServiceApplicationTests- No active profile set, falling back to default profiles: default
+2019/10/29-10:43 [main] INFO  org.springframework.cloud.context.scope.GenericScope- BeanFactory id=18bcd476-69d3-32d4-9e02-b7667afbe349
+2019/10/29-10:43 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$d35dcdc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/10/29-10:43 [main] WARN  com.netflix.config.sources.URLConfigurationSource- No URLs will be polled as dynamic configuration sources.
+2019/10/29-10:43 [main] INFO  com.netflix.config.sources.URLConfigurationSource- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019/10/29-10:43 [main] WARN  com.netflix.config.sources.URLConfigurationSource- No URLs will be polled as dynamic configuration sources.
+2019/10/29-10:43 [main] INFO  com.netflix.config.sources.URLConfigurationSource- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019/10/29-10:43 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/10/29-10:43 [main] INFO  com.zzxmh.userservice.UserServiceApplicationTests- Started UserServiceApplicationTests in 13.902 seconds (JVM running for 16.536)
+2019/10/29-10:43 [Thread-5] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory- Setting initial instance status as: STARTING
+2019/10/29-10:43 [Thread-5] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry- Unregistering application USER-SERVICE with eureka with status DOWN
+2019/10/29-10:43 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2019/10/29-10:43 [Thread-5] WARN  com.netflix.config.sources.URLConfigurationSource- No URLs will be polled as dynamic configuration sources.
+2019/10/29-10:43 [Thread-5] INFO  com.netflix.config.sources.URLConfigurationSource- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
