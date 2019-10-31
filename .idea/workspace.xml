@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d896715e-35ae-4b71-8037-9d6be9f3f141" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service.log" beforeDir="false" afterPath="$PROJECT_DIR$/user-service.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/VerifyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/VerifyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/static/pages/datasource/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/static/pages/datasource/index.html" afterDir="false" />
@@ -137,7 +136,7 @@
         <counts>
           <entry key="dummy" value="1" />
           <entry key="html" value="21" />
-          <entry key="java" value="237" />
+          <entry key="java" value="249" />
           <entry key="properties" value="45" />
           <entry key="xml" value="8" />
           <entry key="yml" value="24" />
@@ -146,7 +145,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="21" />
-          <entry key="JAVA" value="237" />
+          <entry key="JAVA" value="249" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="45" />
           <entry key="XML" value="8" />
@@ -190,8 +189,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/VerifyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
+            <state relative-caret-position="222">
+              <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -202,7 +201,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/vo/VerifyCodeUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4752">
+            <state relative-caret-position="76">
               <caret line="513" lean-forward="true" selection-start-line="513" selection-end-line="513" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -367,32 +366,6 @@
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
               <item name="user-service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -503,7 +476,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572509515115" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572510596768" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -633,7 +606,7 @@
       <workItem from="1572341379051" duration="39000" />
       <workItem from="1572483293266" duration="162000" />
       <workItem from="1572483510513" duration="161000" />
-      <workItem from="1572483695701" duration="14235000" />
+      <workItem from="1572483695701" duration="15250000" />
     </task>
     <servers />
   </component>
@@ -646,7 +619,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21466000" />
+    <option name="totallyTimeSpent" value="22481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -952,16 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/vo/VerifyCodeUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4752">
-          <caret line="513" lean-forward="true" selection-start-line="513" selection-end-line="513" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/static/pages/datasource/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
@@ -983,10 +946,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/vo/VerifyCodeUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="513" lean-forward="true" selection-start-line="513" selection-end-line="513" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/VerifyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
+        <state relative-caret-position="222">
+          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

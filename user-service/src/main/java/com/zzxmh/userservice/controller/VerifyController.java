@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Map;
 
-@Controller
+@RestController
 public class VerifyController {
     @RequestMapping(value="/getImage",method=RequestMethod.GET)
     public void authImage(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -39,28 +40,25 @@ public class VerifyController {
         VerifyCodeUtils.outputImage(w, h, out, verifyCode);
     }
 
-    @RequestMapping(value="/validImage",method=RequestMethod.GET)
+    @RequestMapping(value="/validImage",method=RequestMethod.POST)
     public String validImage(@RequestBody String valid_info){
         JSONObject jsonObject = JSONObject.parseObject(valid_info);
         Map<String, Object> data = (Map<String, Object>) jsonObject;
         String code = (String) data.get("code");
-        HttpSession session=(HttpSession)data.get("sessionverCode");
+//        HttpSession session=HttpSession. data.get("sessionverCode");
         String verCode = (String) data.get("sessionverCode");
         if (null == verCode) {
             return "验证码已失效，请重新输入";
         }
         String verCodeStr = verCode.toString();
-        LocalDateTime localDateTime = (LocalDateTime)session.getAttribute("codeTime");
-        long past = localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
-        long now = LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+//        LocalDateTime localDateTime = (LocalDateTime)session.getAttribute("codeTime");
+//        long past = localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+//        long now = LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
         if(verCodeStr == null || code == null || code.isEmpty() || !verCodeStr.equalsIgnoreCase(code)){
             return "验证码错误";
-        } else if((now-past)/1000/60>5){
-
-            return "验证码已过期，重新获取";
-        } else {
+        }  else {
             //验证成功，删除存储的验证码
-            session.removeAttribute("verCode");
+//            session.removeAttribute("verCode");
             return "200";
         }
     }
