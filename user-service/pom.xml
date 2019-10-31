@@ -54,6 +54,13 @@
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
+        <!-- json -->
+        <!--添加fastjson依赖-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.7</version>
+        </dependency>
 
         <!--服务容错hystrix依赖 START-->
         <dependency>
