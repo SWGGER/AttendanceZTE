@@ -865,3 +865,64 @@ java.sql.SQLException: Access denied for user 'root'@'localhost' (using password
 2019/10/31-14:27 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
 2019/10/31-14:32 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
 2019/10/31-14:37 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-14:42 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-14:47 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-14:52 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-14:57 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-15:02 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-15:07 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-15:14 [main] INFO  com.zzxmh.userservice.UserServiceApplication- No active profile set, falling back to default profiles: default
+2019/10/31-15:14 [main] INFO  org.springframework.cloud.context.scope.GenericScope- BeanFactory id=a58c9d5e-423e-3b0c-92d4-0293e8fcdffd
+2019/10/31-15:14 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4c3e49a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/10/31-15:14 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$68584ca1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/10/31-15:14 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/10/31-15:14 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/10/31-15:14 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019/10/31-15:14 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/userApi]- Initializing Spring embedded WebApplicationContext
+2019/10/31-15:14 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 4149 ms
+2019/10/31-15:14 [main] WARN  com.netflix.config.sources.URLConfigurationSource- No URLs will be polled as dynamic configuration sources.
+2019/10/31-15:14 [main] INFO  com.netflix.config.sources.URLConfigurationSource- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019/10/31-15:14 [main] WARN  com.netflix.config.sources.URLConfigurationSource- No URLs will be polled as dynamic configuration sources.
+2019/10/31-15:14 [main] INFO  com.netflix.config.sources.URLConfigurationSource- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019/10/31-15:14 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/10/31-15:15 [main] INFO  org.springframework.cloud.commons.util.InetUtils- Cannot determine local hostname
+2019/10/31-15:15 [main] INFO  org.springframework.cloud.commons.util.InetUtils- Cannot determine local hostname
+2019/10/31-15:15 [main] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory- Setting initial instance status as: STARTING
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.DiscoveryClient- Initializing Eureka in region us-east-1
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider- Using JSON encoding codec LegacyJacksonJson
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider- Using JSON decoding codec LegacyJacksonJson
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider- Using XML encoding codec XStreamXml
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider- Using XML decoding codec XStreamXml
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.DiscoveryClient- Disable delta property : false
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.DiscoveryClient- Single vip registry refresh property : null
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.DiscoveryClient- Force full registry fetch : false
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.DiscoveryClient- Application is null : false
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.DiscoveryClient- Registered Applications size is zero : true
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.DiscoveryClient- Application version is -1: true
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.DiscoveryClient- Getting all instance registry info from the eureka server
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.DiscoveryClient- The response status is 200
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.DiscoveryClient- Starting heartbeat executor: renew interval is: 30
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.InstanceInfoReplicator- InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.DiscoveryClient- Discovery Client initialized at timestamp 1572506116829 with initial instances count: 2
+2019/10/31-15:15 [main] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry- Registering application USER-SERVICE with eureka with status UP
+2019/10/31-15:15 [main] INFO  com.netflix.discovery.DiscoveryClient- Saw local status change event StatusChangeEvent [timestamp=1572506116847, current=UP, previous=STARTING]
+2019/10/31-15:15 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient- DiscoveryClient_USER-SERVICE/localhost:user-service:8080: registering service...
+2019/10/31-15:15 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path '/userApi'
+2019/10/31-15:15 [main] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration- Updating port to 8080
+2019/10/31-15:15 [main] INFO  com.zzxmh.userservice.UserServiceApplication- Started UserServiceApplication in 44.712 seconds (JVM running for 53.63)
+2019/10/31-15:15 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient- DiscoveryClient_USER-SERVICE/localhost:user-service:8080 - registration status: 204
+2019/10/31-15:16 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/userApi]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019/10/31-15:16 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2019/10/31-15:16 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 27 ms
+2019/10/31-15:20 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-15:25 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-15:30 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-15:35 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-15:40 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-15:45 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-15:50 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-15:55 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-16:00 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-16:05 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
+2019/10/31-16:10 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver- Resolving eureka endpoints via configuration
