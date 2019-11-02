@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zzxmh.employeeservice.dao.dept.LevelMapper" >
+  <resultMap id="BaseResultMap" type="com.zzxmh.employeeservice.domain.dept.Level" >
+    <id column="LEVEL_ID" property="levelId" jdbcType="INTEGER" />
+    <result column="LEVEL_NAME" property="levelName" jdbcType="VARCHAR" />
+    <result column="MAX_SAL" property="maxSal" jdbcType="DOUBLE" />
+    <result column="FLOAT_RATE" property="floatRate" jdbcType="DOUBLE" />
+    <result column="STATE" property="state" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    LEVEL_ID, LEVEL_NAME, MAX_SAL, FLOAT_RATE, STATE
+  </sql>
+  <select id="selectByPrimaryKey" resultType="java.lang.String" parameterType="java.lang.Integer" >
+    select LEVEL_NAME
+    from level
+    where LEVEL_ID = #{levelId,jdbcType=INTEGER}
+  </select>
+  <select id="selectLevelName" resultType="java.lang.Integer" parameterType="java.lang.String" >
+    select LEVEL_ID
+    from level
+    where LEVEL_NAME = #{levelName,jdbcType=VARCHAR}
+  </select>
+  <select id="judgeSal" resultMap="BaseResultMap" parameterType="com.zzxmh.employeeservice.domain.dept.Level">
+    select
+    <include refid="Base_Column_List"/>
+    from level
+    where LEVEL_NAME=#{levelName,jdbcType=VARCHAR} and MAX_SAL>#{maxSal,jdbcType=DOUBLE}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from level
+    where LEVEL_ID = #{levelId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zzxmh.employeeservice.domain.dept.Level" >
+    insert into level (LEVEL_ID, LEVEL_NAME, MAX_SAL, 
+      FLOAT_RATE, STATE)
+    values (#{levelId,jdbcType=INTEGER}, #{levelName,jdbcType=VARCHAR}, #{maxSal,jdbcType=DOUBLE}, 
+      #{floatRate,jdbcType=DOUBLE}, #{state,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zzxmh.employeeservice.domain.dept.Level" >
+    insert into level
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="levelId != null" >
+        LEVEL_ID,
+      </if>
+      <if test="levelName != null" >
+        LEVEL_NAME,
+      </if>
+      <if test="maxSal != null" >
+        MAX_SAL,
+      </if>
+      <if test="floatRate != null" >
+        FLOAT_RATE,
+      </if>
+      <if test="state != null" >
+        STATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="levelId != null" >
+        #{levelId,jdbcType=INTEGER},
+      </if>
+      <if test="levelName != null" >
+        #{levelName,jdbcType=VARCHAR},
+      </if>
+      <if test="maxSal != null" >
+        #{maxSal,jdbcType=DOUBLE},
+      </if>
+      <if test="floatRate != null" >
+        #{floatRate,jdbcType=DOUBLE},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zzxmh.employeeservice.domain.dept.Level" >
+    update level
+    <set >
+      <if test="levelName != null" >
+        LEVEL_NAME = #{levelName,jdbcType=VARCHAR},
+      </if>
+      <if test="maxSal != null" >
+        MAX_SAL = #{maxSal,jdbcType=DOUBLE},
+      </if>
+      <if test="floatRate != null" >
+        FLOAT_RATE = #{floatRate,jdbcType=DOUBLE},
+      </if>
+      <if test="state != null" >
+        STATE = #{state,jdbcType=CHAR},
+      </if>
+    </set>
+    where LEVEL_ID = #{levelId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zzxmh.employeeservice.domain.dept.Level" >
+    update level
+    set LEVEL_NAME = #{levelName,jdbcType=VARCHAR},
+      MAX_SAL = #{maxSal,jdbcType=DOUBLE},
+      FLOAT_RATE = #{floatRate,jdbcType=DOUBLE},
+      STATE = #{state,jdbcType=CHAR}
+    where LEVEL_ID = #{levelId,jdbcType=INTEGER}
+  </update>
+</mapper>
