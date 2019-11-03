@@ -4,6 +4,7 @@ import com.zzxmh.employeeservice.domain.employee.Base_info;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public interface Base_infoMapper {
@@ -18,7 +19,10 @@ public interface Base_infoMapper {
     Base_info selectByPrimaryKey(String userId);
 
     //查询所有基本信息
-    List<Base_info> getAlldatas();
+    List<Base_info> getAlldatas(Map<String,Object> page);
+
+    //获取总记录数
+    int getTotal();
 
     int updateByPrimaryKeySelective(Base_info record);
 

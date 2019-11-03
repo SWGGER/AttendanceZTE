@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 @Primary
@@ -28,7 +29,12 @@ public class Base_infoServiceImpl implements Base_infoService{
     }
 
     @Override
-    public List<Base_info> getAlldatas() {
-        return base_infoMapper.getAlldatas();
+    public List<Base_info> getAlldatas(Map<String,Object> page) {
+        return base_infoMapper.getAlldatas(page);
+    }
+
+    @Override
+    public int getTotal() {
+        return base_infoMapper.getTotal();
     }
 }

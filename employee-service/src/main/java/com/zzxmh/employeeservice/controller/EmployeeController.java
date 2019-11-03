@@ -226,9 +226,17 @@ public class EmployeeController {
 
     //初始化数据
     @RequestMapping("/getAlldatas")
-    public Object getAlldatas(){
+    public Object getAlldatas(@RequestBody String data){
         Map<String,Object> map=new HashMap<>();
-        List<Base_info> base_infos=base_infoService.getAlldatas();
+        JSONObject jsonObject=JSONObject.parseObject(data);
+        Map<String,Object> page=(Map<String,Object>)jsonObject;
+        if(Integer.parseInt(page.get("pageNumber").toString())==1){
+            page.put("pageNumber",0);
+        }else{
+            page.put("pageNumber",(Integer.parseInt(page.get("pageNumber").toString())-1)*
+                    Integer.parseInt(page.get("pageSize").toString()));
+        }
+        List<Base_info> base_infos=base_infoService.getAlldatas(page);
         List<Map<String,Object>> list=new ArrayList<>();
         for(Base_info baseInfo:base_infos){
             Map<String,Object> alldatas=new HashMap<>();
@@ -242,12 +250,12 @@ public class EmployeeController {
             alldatas.put("address",dept.getDeptLoc());
             String job=roleService.selectByUserId(dept_role.getRoleId());
             alldatas.put("job",job);
-//            int level_id=dept_role_levelService.selectByDeptRoleId(dept_role.getId());
             alldatas.put("level",levelService.selectByPrimaryKey(baseInfo.getLevelId()));
             list.add(alldatas);
         }
         map.put("code",0);
         map.put("adddatas",list);
+        map.put("total",base_infoService.getTotal());
         return map;
     }
 

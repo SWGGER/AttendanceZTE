@@ -22,16 +22,16 @@
     from base_info
     where USER_ID = #{userId,jdbcType=VARCHAR}
   </select>
-  <select id="getAlldatas" resultMap="BaseResultMap">
+  <select id="getAlldatas" resultMap="BaseResultMap" parameterType="java.util.Map">
     select
     <include refid="Base_Column_List" />
     from base_info
+    limit #{pageNumber},#{pageSize}
   </select>
-  <!--<select id="getAlldatas" resultMap="BaseResultMap">-->
-    <!--select-->
-    <!--<include refid="Base_Column_List" />-->
-    <!--from base_info-->
-  <!--</select>-->
+  <select id="getTotal" resultType="java.lang.Integer">
+    select count(USER_ID) as total
+    from base_info
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from base_info
     where USER_ID = #{userId,jdbcType=VARCHAR}
