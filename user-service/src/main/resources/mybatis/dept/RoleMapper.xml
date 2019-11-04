@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zzxmh.userservice.dao.dept.RoleMapper" >
+  <resultMap id="BaseResultMap" type="com.zzxmh.userservice.domain.dept.Role" >
+    <id column="ROLE_ID" property="roleId" jdbcType="INTEGER" />
+    <result column="ROLE_NAME" property="roleName" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="CHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.zzxmh.userservice.domain.dept.Role" extends="BaseResultMap" >
+    <result column="ROLE_FUNCTION" property="roleFunction" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ROLE_ID, ROLE_NAME, STATE
+  </sql>
+  <sql id="Blob_Column_List" >
+    ROLE_FUNCTION
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from role
+    where ROLE_ID = #{roleId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from role
+    where ROLE_ID = #{roleId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zzxmh.userservice.domain.dept.Role" >
+    insert into role (ROLE_ID, ROLE_NAME, STATE, 
+      ROLE_FUNCTION)
+    values (#{roleId,jdbcType=INTEGER}, #{roleName,jdbcType=VARCHAR}, #{state,jdbcType=CHAR}, 
+      #{roleFunction,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zzxmh.userservice.domain.dept.Role" >
+    insert into role
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="roleId != null" >
+        ROLE_ID,
+      </if>
+      <if test="roleName != null" >
+        ROLE_NAME,
+      </if>
+      <if test="state != null" >
+        STATE,
+      </if>
+      <if test="roleFunction != null" >
+        ROLE_FUNCTION,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="roleId != null" >
+        #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="roleName != null" >
+        #{roleName,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=CHAR},
+      </if>
+      <if test="roleFunction != null" >
+        #{roleFunction,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zzxmh.userservice.domain.dept.Role" >
+    update role
+    <set >
+      <if test="roleName != null" >
+        ROLE_NAME = #{roleName,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        STATE = #{state,jdbcType=CHAR},
+      </if>
+      <if test="roleFunction != null" >
+        ROLE_FUNCTION = #{roleFunction,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where ROLE_ID = #{roleId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.zzxmh.userservice.domain.dept.Role" >
+    update role
+    set ROLE_NAME = #{roleName,jdbcType=VARCHAR},
+      STATE = #{state,jdbcType=CHAR},
+      ROLE_FUNCTION = #{roleFunction,jdbcType=LONGVARCHAR}
+    where ROLE_ID = #{roleId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zzxmh.userservice.domain.dept.Role" >
+    update role
+    set ROLE_NAME = #{roleName,jdbcType=VARCHAR},
+      STATE = #{state,jdbcType=CHAR}
+    where ROLE_ID = #{roleId,jdbcType=INTEGER}
+  </update>
+
+  <select id="fuzzyselectRolename" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from role
+    where ROLE_NAME like "%"#{roleName,jdbcType=VARCHAR}"%"
+  </select>
+
+</mapper>
