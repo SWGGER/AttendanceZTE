@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zzxmh.userservice.dao.dept.DeptMapper" >
+  <resultMap id="BaseResultMap" type="com.zzxmh.userservice.domain.dept.Dept" >
+    <id column="DEPT_ID" property="deptId" jdbcType="INTEGER" />
+    <result column="DEPT_NAME" property="deptName" jdbcType="VARCHAR" />
+    <result column="DEPT_PREFIX" property="deptPrefix" jdbcType="VARCHAR" />
+    <result column="DEPT_LOC" property="deptLoc" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="CHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.zzxmh.userservice.domain.dept.Dept" extends="BaseResultMap" >
+    <result column="DEPT_FUNCTION" property="deptFunction" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    DEPT_ID, DEPT_NAME, DEPT_PREFIX, DEPT_LOC, STATE
+  </sql>
+  <sql id="Blob_Column_List" >
+    DEPT_FUNCTION
+  </sql>
+  <select id="selectByNameAndLoc" resultMap="ResultMapWithBLOBs" parameterType="com.zzxmh.userservice.domain.dept.Dept" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from dept
+    where DEPT_NAME = #{deptName,jdbcType=VARCHAR} and DEPT_LOC = #{deptLoc,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from dept
+    where DEPT_ID=#{deptId,jdbcType=INTEGER}
+  </select>
+  <select id="getDeptName" resultType="java.lang.String">
+    select distinct DEPT_NAME
+    from dept
+  </select>
+  <select id="getLOCByDeptName" resultType="java.lang.String" parameterType="java.lang.String">
+    select DEPT_LOC
+    from dept
+    where DEPT_NAME=#{deptName,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from dept
+    where DEPT_ID = #{deptId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zzxmh.userservice.domain.dept.Dept" >
+    insert into dept (DEPT_ID, DEPT_NAME, DEPT_PREFIX, 
+      DEPT_LOC, STATE, DEPT_FUNCTION
+      )
+    values (#{deptId,jdbcType=INTEGER}, #{deptName,jdbcType=VARCHAR}, #{deptPrefix,jdbcType=VARCHAR}, 
+      #{deptLoc,jdbcType=VARCHAR}, #{state,jdbcType=CHAR}, #{deptFunction,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zzxmh.userservice.domain.dept.Dept" >
+    insert into dept
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="deptId != null" >
+        DEPT_ID,
+      </if>
+      <if test="deptName != null" >
+        DEPT_NAME,
+      </if>
+      <if test="deptPrefix != null" >
+        DEPT_PREFIX,
+      </if>
+      <if test="deptLoc != null" >
+        DEPT_LOC,
+      </if>
+      <if test="state != null" >
+        STATE,
+      </if>
+      <if test="deptFunction != null" >
+        DEPT_FUNCTION,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="deptId != null" >
+        #{deptId,jdbcType=INTEGER},
+      </if>
+      <if test="deptName != null" >
+        #{deptName,jdbcType=VARCHAR},
+      </if>
+      <if test="deptPrefix != null" >
+        #{deptPrefix,jdbcType=VARCHAR},
+      </if>
+      <if test="deptLoc != null" >
+        #{deptLoc,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=CHAR},
+      </if>
+      <if test="deptFunction != null" >
+        #{deptFunction,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zzxmh.userservice.domain.dept.Dept" >
+    update dept
+    <set >
+      <if test="deptName != null" >
+        DEPT_NAME = #{deptName,jdbcType=VARCHAR},
+      </if>
+      <if test="deptPrefix != null" >
+        DEPT_PREFIX = #{deptPrefix,jdbcType=VARCHAR},
+      </if>
+      <if test="deptLoc != null" >
+        DEPT_LOC = #{deptLoc,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        STATE = #{state,jdbcType=CHAR},
+      </if>
+      <if test="deptFunction != null" >
+        DEPT_FUNCTION = #{deptFunction,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where DEPT_ID = #{deptId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.zzxmh.userservice.domain.dept.Dept" >
+    update dept
+    set DEPT_NAME = #{deptName,jdbcType=VARCHAR},
+      DEPT_PREFIX = #{deptPrefix,jdbcType=VARCHAR},
+      DEPT_LOC = #{deptLoc,jdbcType=VARCHAR},
+      STATE = #{state,jdbcType=CHAR},
+      DEPT_FUNCTION = #{deptFunction,jdbcType=LONGVARCHAR}
+    where DEPT_ID = #{deptId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zzxmh.userservice.domain.dept.Dept" >
+    update dept
+    set DEPT_NAME = #{deptName,jdbcType=VARCHAR},
+      DEPT_PREFIX = #{deptPrefix,jdbcType=VARCHAR},
+      DEPT_LOC = #{deptLoc,jdbcType=VARCHAR},
+      STATE = #{state,jdbcType=CHAR}
+    where DEPT_ID = #{deptId,jdbcType=INTEGER}
+  </update>
+  <select id="recheckDept" parameterType="com.zzxmh.userservice.domain.dept.Dept" resultType="java.lang.Integer">
+    select count(1)
+    from dept
+    where DEPT_NAME = #{deptName,jdbcType=VARCHAR} and DEPT_LOC= #{deptLoc,jdbcType=VARCHAR}
+  </select>
+
+</mapper>
