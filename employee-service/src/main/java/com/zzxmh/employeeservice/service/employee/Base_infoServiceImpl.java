@@ -37,4 +37,12 @@ public class Base_infoServiceImpl implements Base_infoService{
     public int getTotal() {
         return base_infoMapper.getTotal();
     }
+
+    @Override
+    public boolean deleteByPrimaryKey(String userId) {
+        int count=base_infoMapper.deleteByPrimaryKey(userId);
+        if (count>0)
+            return true;
+        return false;
+    }
 }

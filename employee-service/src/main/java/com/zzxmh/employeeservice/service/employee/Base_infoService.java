@@ -10,4 +10,5 @@ public interface Base_infoService {
     Base_info selectByPrimaryKey(String userId);
     List<Base_info> getAlldatas(Map<String,Object> page);
     int getTotal();
+    boolean deleteByPrimaryKey(String userId);
 }

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface Detail_infoMapper {
+    //根据user_id删除详细信息表
     int deleteByPrimaryKey(String userId);
 
     //插入详细信息

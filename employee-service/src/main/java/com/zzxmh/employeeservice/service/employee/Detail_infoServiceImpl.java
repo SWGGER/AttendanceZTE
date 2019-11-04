@@ -24,4 +24,12 @@ public class Detail_infoServiceImpl implements Detail_infoService{
     public Detail_info selectByPrimaryKey(String userId) {
         return detail_infoMapper.selectByPrimaryKey(userId);
     }
+
+    @Override
+    public boolean deleteByPrimaryKey(String userId) {
+        int count=detail_infoMapper.deleteByPrimaryKey(userId);
+        if (count>0)
+            return true;
+        return false;
+    }
 }

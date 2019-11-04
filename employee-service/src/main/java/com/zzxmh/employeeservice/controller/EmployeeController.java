@@ -7,6 +7,7 @@ import com.zzxmh.employeeservice.domain.dept.Level;
 import com.zzxmh.employeeservice.domain.dept.Role;
 import com.zzxmh.employeeservice.domain.employee.Base_info;
 import com.zzxmh.employeeservice.domain.employee.Detail_info;
+import com.zzxmh.employeeservice.domain.employee.Dimission;
 import com.zzxmh.employeeservice.domain.user.User;
 import com.zzxmh.employeeservice.domain.user.User_dept_role;
 import com.zzxmh.employeeservice.service.dept.*;
@@ -21,10 +22,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @RestController
 public class EmployeeController {
@@ -82,6 +82,7 @@ public class EmployeeController {
         String user_id="";
         if(num==999){
             user_id=dimissionService.getMinUserID(dept1.getDeptPrefix());
+            dimissionService.deleteByUserId(user_id);
         }else{
             user_id= CommonMethods.getUserId(dept1.getDeptPrefix(),num);
         }
@@ -209,6 +210,7 @@ public class EmployeeController {
         User_dept_role user_dept_role=new User_dept_role();
         user_dept_role.setUserId(map1.get("userid").toString());
         user_dept_role.setDeptRoleId(dept_role1.getId());
+        user_dept_role.setEntryTime(new Date());
         boolean user_dept_roleflag=user_dept_roleService.insert(user_dept_role);
         Detail_info detail_info=new Detail_info();
         detail_info.setUserId(map1.get("userid").toString());
@@ -243,7 +245,16 @@ public class EmployeeController {
             alldatas.put("userid",baseInfo.getUserId());
             alldatas.put("name",baseInfo.getEName());
             alldatas.put("gender",baseInfo.getGender());
-            int dept_role_id=user_dept_roleService.selectByUserId(baseInfo.getUserId());
+            List<User_dept_role> user_dept_roles=user_dept_roleService.selectByUserId(baseInfo.getUserId());
+            int dept_role_id=user_dept_roles.get(0).getDeptRoleId();
+            Date min_date=user_dept_roles.get(0).getEntryTime();
+            for (int i=1;i<user_dept_roles.size();i++){
+                Date max_date=user_dept_roles.get(i).getEntryTime();
+                if (min_date.getTime()>max_date.getTime()) {
+                    min_date = max_date;
+                    dept_role_id=user_dept_roles.get(i).getDeptRoleId();
+                }
+            }
             Dept_role dept_role=dept_roleService.selectByPrimaryKey(dept_role_id);
             Dept dept=deptService.selectByPrimaryKey(dept_role.getDeptId());
             alldatas.put("dept",dept.getDeptName());
@@ -305,6 +316,50 @@ public class EmployeeController {
             map.put("code",-1);
         }else {
             map.put("code",0);
+        }
+        return map;
+    }
+
+    //user_id的查重
+    @RequestMapping("/checkUserId")
+    public Object checkUserId(@RequestBody String data){
+        Map<String,Object> map=new HashMap<>();
+        JSONObject jsonObject=JSONObject.parseObject(data);
+        Map<String,Object> map1=(Map<String,Object>)jsonObject;
+        User user=userService.selectByPrimaryKey(map1.get("userid").toString());
+        if (user==null){
+            map.put("code",0);
+        }else {
+            map.put("code",-1);
+        }
+        return map;
+    }
+
+
+    @RequestMapping("/dimissionUser")
+    public Object dimissionUser(@RequestBody String data){
+        Map<String,Object> map=new HashMap<>();
+        JSONObject jsonObject=JSONObject.parseObject(data);
+        Map<String,Object> map1=(Map<String,Object>)jsonObject;
+        boolean userflag=userService.deleteByPrimaryKey(map1.get("userid").toString());
+        List<User_dept_role> user_dept_roles=user_dept_roleService.selectByUserId(map1.get("userid").toString());
+        boolean user_dept_roleflag=user_dept_roleService.deleteByUserId(map1.get("userid").toString());
+        boolean base_infoflag=base_infoService.deleteByPrimaryKey(map1.get("userid").toString());
+        boolean detail_infofalg=detail_infoService.deleteByPrimaryKey(map1.get("userid").toString());
+        List<Dimission> dimission=new ArrayList<>();
+        for(User_dept_role user_dept_role:user_dept_roles){
+            Dimission d=new Dimission();
+            d.setUserId(map1.get("userid").toString());
+            d.setDimissionTime(new Date());
+            d.setDeptRoleId(user_dept_role.getDeptRoleId());
+            dimission.add(d);
+        }
+        System.out.println();
+        boolean dimissionflag=dimissionService.insert(dimission);
+        if(userflag&&user_dept_roleflag&&base_infoflag&&detail_infofalg&&dimissionflag){
+            map.put("code",0);
+        }else {
+            map.put("code",-1);
         }
         return map;
     }

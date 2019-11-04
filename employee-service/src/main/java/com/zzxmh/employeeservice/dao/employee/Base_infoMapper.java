@@ -8,9 +8,8 @@ import java.util.Map;
 
 @Repository
 public interface Base_infoMapper {
+    //根据user_id删除基本信息
     int deleteByPrimaryKey(String userId);
-
-    int insert(Base_info record);
 
     //插入基本信息
     int insertSelective(Base_info record);

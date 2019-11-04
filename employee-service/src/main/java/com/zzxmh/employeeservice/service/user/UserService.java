@@ -6,4 +6,8 @@ public interface UserService {
     boolean insert(User record);
 
     String getMaxUserID(String prefix);
+
+    boolean deleteByPrimaryKey(String userId);
+
+    User selectByPrimaryKey(String userId);
 }

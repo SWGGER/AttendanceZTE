@@ -25,4 +25,17 @@ public class UserServiceImpl implements UserService {
     public String getMaxUserID(String prefix) {
         return userMapper.getMaxUserID(prefix);
     }
+
+    @Override
+    public boolean deleteByPrimaryKey(String userId) {
+        int count=userMapper.deleteByPrimaryKey(userId);
+        if (count>0)
+            return true;
+        return false;
+    }
+
+    @Override
+    public User selectByPrimaryKey(String userId) {
+        return userMapper.selectByPrimaryKey(userId);
+    }
 }

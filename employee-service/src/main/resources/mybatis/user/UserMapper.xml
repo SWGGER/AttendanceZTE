@@ -32,22 +32,4 @@
     values (#{userId,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{state,jdbcType=CHAR}
       )
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.zzxmh.employeeservice.domain.user.User" >
-    update user
-    <set >
-      <if test="password != null" >
-        PASSWORD = #{password,jdbcType=VARCHAR},
-      </if>
-      <if test="state != null" >
-        STATE = #{state,jdbcType=CHAR},
-      </if>
-    </set>
-    where USER_ID = #{userId,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.zzxmh.employeeservice.domain.user.User" >
-    update user
-    set PASSWORD = #{password,jdbcType=VARCHAR},
-      STATE = #{state,jdbcType=CHAR}
-    where USER_ID = #{userId,jdbcType=VARCHAR}
-  </update>
 </mapper>
