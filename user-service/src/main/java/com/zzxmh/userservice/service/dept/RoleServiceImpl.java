@@ -21,4 +21,19 @@ public class RoleServiceImpl implements RoleService{
     public List<Role> fuzzyselectRolename(String rolename) {
         return roleMapper.fuzzyselectRolename(rolename);
     }
+
+    @Override
+    public Integer RoleNameExistRole(String roleName) {
+        return roleMapper.RoleNameExistRole(roleName);
+    }
+
+    @Override
+    public Integer RoleLastData() {
+        return roleMapper.RoleLastData();
+    }
+
+    @Override
+    public int insertSelective(Role record) {
+        return roleMapper.insertSelective(record);
+    }
 }

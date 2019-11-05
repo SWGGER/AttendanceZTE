@@ -33,4 +33,6 @@ public interface DeptMapper {
 
     //部门名和地点查重
     int recheckDept(Dept dept);
+
+    Dept selLastData();
 }

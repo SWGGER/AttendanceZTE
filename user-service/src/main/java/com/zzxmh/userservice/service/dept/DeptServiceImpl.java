@@ -3,6 +3,7 @@ package com.zzxmh.userservice.service.dept;
 import com.zzxmh.userservice.dao.dept.DeptMapper;
 import com.zzxmh.userservice.dao.user.UserMapper;
 import com.zzxmh.userservice.domain.dept.Dept;
+import com.zzxmh.userservice.domain.dept.Role;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
@@ -34,5 +35,10 @@ public class DeptServiceImpl implements DeptService {
         }else{
             return true;
         }
+    }
+
+    @Override
+    public Dept selLastData() {
+        return deptMapper.selLastData();
     }
 }

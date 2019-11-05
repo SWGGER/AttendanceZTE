@@ -6,4 +6,6 @@ public interface DeptService {
     boolean insertSelective(Dept record);
 
     boolean recheckDept(Dept dept);
+
+    Dept selLastData();
 }

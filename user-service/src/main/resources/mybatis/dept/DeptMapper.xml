@@ -141,4 +141,13 @@
     where DEPT_NAME = #{deptName,jdbcType=VARCHAR} and DEPT_LOC= #{deptLoc,jdbcType=VARCHAR}
   </select>
 
+  <select id="selLastData" resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from dept
+    order by dept_id desc
+    limit 1
+  </select>
 </mapper>

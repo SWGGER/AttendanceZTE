@@ -22,4 +22,8 @@ public interface RoleMapper {
 
     List<Role> fuzzyselectRolename(String rolename);
 
+    Integer RoleNameExistRole(String roleName);
+
+    Integer RoleLastData();
+
 }
