@@ -1,3 +1,16 @@
+redis:
+  jedis:
+    database: 1
+    host: 127.0.0.1
+    password: 123456
+    pool:
+      max-active: 200
+      max-idle: 8
+      max-wait: -1
+      min-idle: 0
+    port: 6379
+    timeout: 6000
+
 eureka:
   client:
     service-url:
@@ -26,7 +39,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/zte_attendance?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
     username: root
-    password:
+    password: 123456
 
 
     hikari:

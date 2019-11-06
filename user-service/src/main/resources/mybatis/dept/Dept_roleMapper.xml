@@ -68,4 +68,10 @@
       ROLE_ID = #{roleId,jdbcType=INTEGER}
     where ID = #{id,jdbcType=INTEGER}
   </update>
+  <select id="selectByRoleandDept" resultMap="BaseResultMap" parameterType="com.zzxmh.userservice.domain.dept.Dept_role" >
+    select
+    <include refid="Base_Column_List" />
+    from dept_role
+    where DEPT_ID = #{deptId,jdbcType=INTEGER} and ROLE_ID = #{roleId,jdbcType=INTEGER}
+  </select>
 </mapper>

@@ -19,4 +19,7 @@ public interface LevelMapper {
     int updateByPrimaryKey(Level record);
 
     List<Level> getAllLevel();
+    //根据levelname获取到levelid
+
+    Level selectByLevelname(String levelname);
 }

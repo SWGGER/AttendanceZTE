@@ -102,6 +102,24 @@
     where ROLE_NAME like "%"#{roleName,jdbcType=VARCHAR}"%"
   </select>
 
+  <select id="selectRolename" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from role
+    where ROLE_NAME = #{roleName,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectBynameandFunc" resultMap="ResultMapWithBLOBs" parameterType="com.zzxmh.userservice.domain.dept.Role" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from role
+    where ROLE_NAME = #{roleName,jdbcType=VARCHAR} and  ROLE_FUNCTION = #{roleFunction,jdbcType=LONGVARCHAR}
+  </select>
+
   <select id="RoleNameExistRole" resultType="java.lang.Integer" parameterType="java.lang.String">
     select ROLE_ID
     from role
@@ -114,5 +132,4 @@
     order by role_id DESC
     limit 1
   </select>
-
 </mapper>

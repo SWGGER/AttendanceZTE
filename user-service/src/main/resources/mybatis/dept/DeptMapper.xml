@@ -150,4 +150,13 @@
     order by dept_id desc
     limit 1
   </select>
+
+  <select id="getDeptInfo" resultMap="ResultMapWithBLOBs" parameterType="com.zzxmh.userservice.domain.dept.Dept" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from dept
+    where DEPT_NAME = #{deptName,jdbcType=VARCHAR} and DEPT_LOC = #{deptLoc,jdbcType=VARCHAR}
+  </select>
 </mapper>

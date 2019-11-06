@@ -22,4 +22,6 @@ public interface PermissionMapper {
     int updateByPrimaryKey(Permission record);
 
     List<Permission> fuzzyselectPermission(String context);
+
+    Permission selectByPermissionName(String permissionName);
 }

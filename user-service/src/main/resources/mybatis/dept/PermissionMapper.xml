@@ -92,4 +92,22 @@
       STATE = #{state,jdbcType=CHAR}
     where PERMISSION_ID = #{permissionId,jdbcType=INTEGER}
   </update>
+
+  <select id="fuzzyselectPermission" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from permission
+    where PERMISSION_NAME like "%"#{permissionName,jdbcType=VARCHAR}"%"
+  </select>
+
+  <select id="selectByPermissionName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from permission
+    where PERMISSION_NAME = #{permissionName,jdbcType=VARCHAR}
+  </select>
 </mapper>

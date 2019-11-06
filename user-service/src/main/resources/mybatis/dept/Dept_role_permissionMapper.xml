@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zzxmh.userservice.dao.dept.Dept_role_permissionMapper" >
+  <resultMap id="BaseResultMap" type="com.zzxmh.userservice.domain.dept.Dept_role_permission" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="DEPT_ROLE_ID" property="deptRoleId" jdbcType="INTEGER" />
+    <result column="PERMISSION_ID" property="permissionId" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, DEPT_ROLE_ID, PERMISSION_ID
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from dept_role_permission
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from dept_role_permission
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zzxmh.userservice.domain.dept.Dept_role_permission" >
+    insert into dept_role_permission (ID, DEPT_ROLE_ID, PERMISSION_ID
+      )
+    values (#{id,jdbcType=INTEGER}, #{deptRoleId,jdbcType=INTEGER}, #{permissionId,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zzxmh.userservice.domain.dept.Dept_role_permission" >
+    insert into dept_role_permission
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="deptRoleId != null" >
+        DEPT_ROLE_ID,
+      </if>
+      <if test="permissionId != null" >
+        PERMISSION_ID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="deptRoleId != null" >
+        #{deptRoleId,jdbcType=INTEGER},
+      </if>
+      <if test="permissionId != null" >
+        #{permissionId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zzxmh.userservice.domain.dept.Dept_role_permission" >
+    update dept_role_permission
+    <set >
+      <if test="deptRoleId != null" >
+        DEPT_ROLE_ID = #{deptRoleId,jdbcType=INTEGER},
+      </if>
+      <if test="permissionId != null" >
+        PERMISSION_ID = #{permissionId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zzxmh.userservice.domain.dept.Dept_role_permission" >
+    update dept_role_permission
+    set DEPT_ROLE_ID = #{deptRoleId,jdbcType=INTEGER},
+      PERMISSION_ID = #{permissionId,jdbcType=INTEGER}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

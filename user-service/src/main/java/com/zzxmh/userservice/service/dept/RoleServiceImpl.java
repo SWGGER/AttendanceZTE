@@ -23,6 +23,21 @@ public class RoleServiceImpl implements RoleService{
     }
 
     @Override
+    public List<Role> selectRolename(String rolename) {
+        return roleMapper.selectRolename(rolename);
+    }
+
+    @Override
+    public int insertSelective(Role record) {
+        return roleMapper.insertSelective(record);
+    }
+
+    @Override
+    public Role selectBynameandFunc(Role record) {
+        return roleMapper.selectBynameandFunc(record);
+    }
+
+    @Override
     public Integer RoleNameExistRole(String roleName) {
         return roleMapper.RoleNameExistRole(roleName);
     }
@@ -30,10 +45,5 @@ public class RoleServiceImpl implements RoleService{
     @Override
     public Integer RoleLastData() {
         return roleMapper.RoleLastData();
-    }
-
-    @Override
-    public int insertSelective(Role record) {
-        return roleMapper.insertSelective(record);
     }
 }

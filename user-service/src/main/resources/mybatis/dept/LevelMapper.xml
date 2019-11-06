@@ -96,4 +96,11 @@
     <include refid="Base_Column_List" />
     from level
   </select>
+
+  <select id="selectByLevelname" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from level
+    where LEVEL_NAME = #{levelName,jdbcType=VARCHAR}
+  </select>
 </mapper>

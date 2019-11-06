@@ -7,6 +7,11 @@ import java.util.List;
 public interface RoleService {
     List<Role> fuzzyselectRolename(String rolename);
 
+    List<Role> selectRolename(String rolename);
+
+    Role selectBynameandFunc(Role record);
+
+
     //查询role表中是否存在该职务
     Integer RoleNameExistRole(String roleName);
 

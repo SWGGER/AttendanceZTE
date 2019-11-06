@@ -34,5 +34,8 @@ public interface DeptMapper {
     //部门名和地点查重
     int recheckDept(Dept dept);
 
+    //根据name和loc查出id
+    List<Dept> getDeptInfo(Dept dept);
+
     Dept selLastData();
 }
