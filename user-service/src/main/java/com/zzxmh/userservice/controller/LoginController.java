@@ -47,7 +47,7 @@ public class LoginController {
                     jedis = jedisPool.getResource();
                     jedis.set("user_one",userId);
                     // 5、设置key的过期时间。模拟Session的过期时间。一般半个小时。
-                    //jedis.expire(token, 1800);
+                    jedis.expire("user_one", 1800);
                     jedis.close();
 //                    Cookie cookie = new Cookie("token", token);
 //                    cookie.setPath("/");

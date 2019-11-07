@@ -35,10 +35,10 @@ public class DeptServiceImpl implements DeptService {
     @Override
     public boolean recheckDept(Dept dept) {
         int count=deptMapper.recheckDept(dept);
-        if(count>0){
-            return false;
-        }else{
+        if(count==0){
             return true;
+        }else{
+            return false;
         }
     }
 

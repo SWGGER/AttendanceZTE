@@ -40,7 +40,7 @@ public class RoleController {
         String searchinfo=map.get("data").toString();
         List<Role> list=roleService.fuzzyselectRolename(searchinfo);
         List<String> rolelist=new ArrayList<>();
-        if(list!=null){
+        if(list.size() > 0 ){
             for(int i=0;i<list.size();i++){
 
                 rolelist.add(list.get(i).getRoleName());
@@ -51,6 +51,7 @@ public class RoleController {
         }
         return result;
     }
+
     //查重
     @RequestMapping("/selectRolename")
     public Object selectRolename (@RequestBody String row_info){
@@ -77,7 +78,7 @@ public class RoleController {
         result.setMsg(DataSourceEnum.FAIL.getMsg());
         List<Level> list=levelService.getAllLevel();
         List<String> levellist=new ArrayList<>();
-        if(list!=null){
+        if(list.size() > 0 ){
             for(int i=0;i<list.size();i++){
 
                 levellist.add(list.get(i).getLevelName());
@@ -99,13 +100,16 @@ public class RoleController {
         String searchinfo=map.get("data").toString();
         List<Permission> list=permissionService.fuzzyselectPermission(searchinfo);
         List<String> perlist=new ArrayList<>();
-        if(list!=null){
+        if(list.size() > 0 ){
             for(int i=0;i<list.size();i++){
                 perlist.add(list.get(i).getPermissionName());
             }
             result.setCode(DataSourceEnum.SUCCESS.getCode());
             result.setMsg(DataSourceEnum.SUCCESS.getMsg());
             result.setPayload(perlist);
+        }else{
+            result.setCode(DataSourceEnum.FAIL.getCode());
+            result.setMsg(DataSourceEnum.FAIL.getMsg());
         }
         return result;
     }
