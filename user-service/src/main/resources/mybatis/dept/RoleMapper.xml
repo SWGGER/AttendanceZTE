@@ -132,4 +132,13 @@
     order by role_id DESC
     limit 1
   </select>
+  <select id="selectByRoleName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from role
+    where ROLE_NAME = #{roleName,jdbcType=VARCHAR}
+  </select>
+
 </mapper>

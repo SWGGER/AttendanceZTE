@@ -20,4 +20,7 @@ public interface RoleService {
 
     //插入role表中数据
     int insertSelective(Role record);
+
+
+    Role selectByRoleName(String roleName);
 }

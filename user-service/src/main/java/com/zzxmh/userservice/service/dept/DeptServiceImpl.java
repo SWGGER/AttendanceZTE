@@ -61,4 +61,19 @@ public class DeptServiceImpl implements DeptService {
     public Dept selLastData() {
         return deptMapper.selLastData();
     }
+
+    @Override
+    public Dept selectByPrimaryKey(int deptId) {
+        return deptMapper.selectByPrimaryKey(deptId);
+    }
+
+    @Override
+    public List<Dept> fuzzyselectDeptnameAndLoc(String deptName) {
+        return deptMapper.fuzzyselectDeptnameAndLoc(deptName);
+    }
+
+    @Override
+    public Dept selectDeptId(Dept dept) {
+        return deptMapper.selectDeptId(dept);
+    }
 }

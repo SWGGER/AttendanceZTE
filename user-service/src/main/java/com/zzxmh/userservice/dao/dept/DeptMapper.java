@@ -38,4 +38,8 @@ public interface DeptMapper {
     List<Dept> getDeptInfo(Dept dept);
 
     Dept selLastData();
+
+    List<Dept> fuzzyselectDeptnameAndLoc(String record);
+
+    Dept selectDeptId(Dept dept);
 }

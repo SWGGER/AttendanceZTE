@@ -4,19 +4,14 @@ import com.alibaba.fastjson.JSONObject;
 import com.zzxmh.userservice.domain.dept.*;
 import com.zzxmh.userservice.domain.employee.Base_info;
 import com.zzxmh.userservice.enumeration.DataSourceEnum;
-import com.zzxmh.userservice.service.dept.DeptService;
-import com.zzxmh.userservice.service.dept.LevelService;
-import com.zzxmh.userservice.service.dept.PermissionService;
-import com.zzxmh.userservice.service.dept.RoleService;
+import com.zzxmh.userservice.service.dept.*;
 import com.zzxmh.userservice.vo.ControllerResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 @RequestMapping("/addRole")
@@ -29,6 +24,8 @@ public class RoleController {
     private PermissionService permissionService;
     @Autowired
     private DeptService deptService;
+    @Autowired
+    private Dept_roleService dept_roleService;
 //用户输入后模糊查询rolename
     @RequestMapping("/fuzzySelectRolename")
     public Object fuzzyselectNameAndId (@RequestBody String row_info){
@@ -114,6 +111,72 @@ public class RoleController {
         return result;
     }
 
+    @RequestMapping("/selectlocanddeptbyuserid")
+    public Object selectlocanddeptbyuserid (@RequestBody String row_info){
+        ControllerResult result = new ControllerResult();
+        result.setCode(DataSourceEnum.FAIL.getCode());
+        result.setMsg(DataSourceEnum.FAIL.getMsg());
+        JSONObject jsonObject=JSONObject.parseObject(row_info);
+        Map<String,Object> map=(Map<String,Object>)jsonObject;
+        String userid=map.get("userid").toString();
+        List<User_dept_role> dept_roles=dept_roleService.selectUDRbyuserid(userid);
+        Integer deptid=null;
+        for(int i=0;i<dept_roles.size();i++){
+            deptid=dept_roleService.selectByPrimaryKey(dept_roles.get(i).getDeptRoleId()).getDeptId();
+        }
+
+        Dept dept=deptService.selectByPrimaryKey(deptid);
+        Map<String,Object> returnmap = new HashMap<>();
+        returnmap.put("deptname",dept.getDeptName());
+        returnmap.put("deptloc",dept.getDeptLoc());
+
+            result.setCode(DataSourceEnum.SUCCESS.getCode());
+            result.setMsg(DataSourceEnum.SUCCESS.getMsg());
+            result.setPayload(returnmap);
+
+
+        return result;
+    }
+
+
+    @RequestMapping("/insertUDRinfo")
+    public Object insertUDRinfo (@RequestBody String row_info){
+        ControllerResult result = new ControllerResult();
+        result.setCode(DataSourceEnum.FAIL.getCode());
+        result.setMsg(DataSourceEnum.FAIL.getMsg());
+        JSONObject jsonObject=JSONObject.parseObject(row_info);
+        Map<String,Object> map=(Map<String,Object>)jsonObject;
+        String deptinfo=map.get("deptinfo").toString();
+        String[] splited = deptinfo.split("\\s+");
+        String deptname=splited[0];
+        String deptloc=splited[1];
+        String userinfo=map.get("userinfo").toString();
+        String[] userinfosp = userinfo.split("@");
+        String username=userinfosp[0];
+        String userid=userinfosp[1];
+        Dept dept =new Dept();
+        dept.setDeptName(deptname);
+        dept.setDeptLoc(deptloc);
+        Integer deptid=deptService.getDeptInfo(dept).get(0).getDeptId();
+        Integer roleid=roleService.selectByRoleName(deptname+"总监").getRoleId();
+        Dept_role dr=new Dept_role();
+        dr.setRoleId(roleid);
+        dr.setDeptId(deptid);
+        Integer dept_role_id=deptService.selectByRoleandDept(dr).getId();
+        User_dept_role udr=new User_dept_role();
+        udr.setDeptRoleId(dept_role_id);
+        udr.setUserId(userid);
+        udr.setEntryTime(new Date());
+        int flag=dept_roleService.insertSelective(udr);
+        if(flag==1){
+            result.setCode(DataSourceEnum.SUCCESS.getCode());
+            result.setMsg(DataSourceEnum.SUCCESS.getMsg());
+            result.setPayload(userid);
+        }
+       return result;
+    }
+
+
     @RequestMapping("/insertinfo")
     public Object insertinfo (@RequestBody String row_info){
         ControllerResult result = new ControllerResult();
@@ -139,7 +202,7 @@ public class RoleController {
         int flag=roleService.insertSelective(role);
         Integer roleid=null;
         if(flag==1) {
-             roleid = roleService.selectBynameandFunc(role).getRoleId();
+            roleid = roleService.selectBynameandFunc(role).getRoleId();
         }
         Dept_role deptRole=new Dept_role();
         deptRole.setDeptId(deptid);
@@ -147,7 +210,7 @@ public class RoleController {
         int insertrp=deptService.insertSelective(deptRole);
         Integer dept_role_id=null;
         if(insertrp==1){
-             dept_role_id=deptService.selectByRoleandDept(deptRole).getId();
+            dept_role_id=deptService.selectByRoleandDept(deptRole).getId();
         }
         Integer levelstartid=levelService.selectByLevelname(level_start).getLevelId();
         Integer levelendid=levelService.selectByLevelname(level_end).getLevelId();
@@ -167,13 +230,12 @@ public class RoleController {
             int insertpermission=permissionService.insertSelective(drp);
 
         }
-            result.setCode(DataSourceEnum.SUCCESS.getCode());
-            result.setMsg(DataSourceEnum.SUCCESS.getMsg());
+        result.setCode(DataSourceEnum.SUCCESS.getCode());
+        result.setMsg(DataSourceEnum.SUCCESS.getMsg());
 
 
         return result;
     }
-
 
 
 }

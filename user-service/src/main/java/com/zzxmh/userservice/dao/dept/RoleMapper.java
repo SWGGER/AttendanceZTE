@@ -30,5 +30,7 @@ public interface RoleMapper {
 
     Integer RoleLastData();
 
+    Role selectByRoleName(String roleName);
+
 
 }

@@ -33,6 +33,11 @@ public class RoleServiceImpl implements RoleService{
     }
 
     @Override
+    public Role selectByRoleName(String roleName) {
+        return roleMapper.selectByRoleName(roleName);
+    }
+
+    @Override
     public Role selectBynameandFunc(Role record) {
         return roleMapper.selectBynameandFunc(record);
     }
