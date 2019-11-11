@@ -74,4 +74,11 @@
     from dept_role
     where DEPT_ID = #{deptId,jdbcType=INTEGER} and ROLE_ID = #{roleId,jdbcType=INTEGER}
   </select>
+
+  <select id="selLastData"  resultType="java.lang.Integer">
+    select id
+    from dept_role
+    order by id DESC
+    limit 1
+  </select>
 </mapper>

@@ -18,4 +18,6 @@ public interface Dept_roleMapper {
     int updateByPrimaryKey(Dept_role record);
 
     Dept_role selectByRoleandDept(Dept_role record);
+
+    int selLastData();
 }
