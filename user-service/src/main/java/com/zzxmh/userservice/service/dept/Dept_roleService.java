@@ -13,4 +13,6 @@ public interface Dept_roleService {
     List<User_dept_role> selectUDRbyuserid(String userid);
 
     int insertSelective(User_dept_role record);
+
+    Dept_role selectByRoleandDept(Dept_role record);
 }

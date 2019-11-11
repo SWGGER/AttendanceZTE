@@ -17,11 +17,15 @@ import com.zzxmh.employeeservice.service.employee.DimissionService;
 import com.zzxmh.employeeservice.service.user.UserService;
 import com.zzxmh.employeeservice.service.user.User_dept_roleService;
 import com.zzxmh.employeeservice.tools.CommonMethods;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -270,6 +274,24 @@ public class EmployeeController {
         return map;
     }
 
+    //获取模糊查询的所有数据
+    @RequestMapping("/getfuzzyAlldatas")
+    public Object getfuzzyAlldatas(@RequestBody String data){
+        Map<String,Object> map=new HashMap<>();
+        JSONObject jsonObject=JSONObject.parseObject(data);
+        Map<String,Object> map1=(Map<String,Object>)jsonObject;
+        if(Integer.parseInt(map1.get("pageNumber").toString())==1){
+            map1.put("pageNumber",0);
+        }else{
+            map1.put("pageNumber",(Integer.parseInt(map1.get("pageNumber").toString())-1)*
+                    Integer.parseInt(map1.get("pageSize").toString()));
+        }
+        List<Map<String,Object>> adddatas=base_infoService.getfuzzyAlldatas(map1);
+        map.put("adddatas",adddatas);
+        map.put("total",base_infoService.getfuzzyTotal(map1.get("searchtext").toString()));
+        return map;
+    }
+
     //点击基本信息按钮
     @RequestMapping("/getBaseInfo")
     public Object getBaseInfo(@RequestBody String data){
@@ -361,6 +383,26 @@ public class EmployeeController {
         }else {
             map.put("code",-1);
         }
+        return map;
+    }
+
+    //将模糊查询数据生成excel表格
+    @RequestMapping("/generatorExcel")
+    public Object generatorExcel(@RequestBody String data, HttpServletResponse response){
+        Map<String,Object> map=new HashMap<>();
+        JSONObject jsonObject=JSONObject.parseObject(data);
+        Map<String,Object> map1=(Map<String,Object>)jsonObject;
+        List<String> userids=(List<String>)map1.get("globle_selected_id");
+        File file=new File("D:/employeeInfo/test.xls");
+        if (file.exists())
+            file.delete();
+        try {
+            file.createNewFile();
+            //创建工作簿
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         return map;
     }
 }

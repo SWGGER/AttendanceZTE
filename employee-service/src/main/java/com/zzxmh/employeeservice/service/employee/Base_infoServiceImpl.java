@@ -45,4 +45,14 @@ public class Base_infoServiceImpl implements Base_infoService{
             return true;
         return false;
     }
+
+    @Override
+    public List<Map<String, Object>> getfuzzyAlldatas(Map<String, Object> map) {
+        return base_infoMapper.getfuzzyAlldatas(map);
+    }
+
+    @Override
+    public int getfuzzyTotal(String searchtext) {
+        return base_infoMapper.getfuzzyTotal(searchtext);
+    }
 }

@@ -68,7 +68,8 @@ public class DeptController {
         Dept_role dept_role=new Dept_role();
         //将新插入的职位id与职位名拿出
         Dept dept_lastData=deptService.selLastData();
-        String dept_pre_name=dept_lastData.getDeptName();String nex="总监";
+        String dept_pre_name=dept_lastData.getDeptName();
+        String nex="总监";
         String dept_name=dept_pre_name+nex;
         //查询该职位是否已存在总监,返回总监id或者null
         Integer role_exist_id=roleService.RoleNameExistRole(dept_name);
@@ -84,6 +85,8 @@ public class DeptController {
             dept_role.setDeptId(dept_lastData.getDeptId());
             dept_role.setRoleId(role_LastData);
             dept_role_insert=dept_roleService.insertSelective(dept_role);
+            //给该职位设置等级
+
         }else{
             //总监存在情况，完善dept_role表
             dept_role.setDeptId(dept_lastData.getDeptId());

@@ -1,6 +1,7 @@
 package com.zzxmh.userservice.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.zzxmh.userservice.dao.dept.Dept_role_permissionMapper;
 import com.zzxmh.userservice.domain.dept.*;
 import com.zzxmh.userservice.domain.employee.Base_info;
 import com.zzxmh.userservice.enumeration.DataSourceEnum;
@@ -26,7 +27,10 @@ public class RoleController {
     private DeptService deptService;
     @Autowired
     private Dept_roleService dept_roleService;
-//用户输入后模糊查询rolename
+    @Autowired
+    private Dept_role_permissionService dept_role_permissionService;
+
+    //用户输入后模糊查询rolename
     @RequestMapping("/fuzzySelectRolename")
     public Object fuzzyselectNameAndId (@RequestBody String row_info){
         ControllerResult result = new ControllerResult();
@@ -49,25 +53,6 @@ public class RoleController {
         return result;
     }
 
-    //查重
-    @RequestMapping("/selectRolename")
-    public Object selectRolename (@RequestBody String row_info){
-        ControllerResult result = new ControllerResult();
-        result.setCode(DataSourceEnum.FAIL.getCode());
-        result.setMsg(DataSourceEnum.FAIL.getMsg());
-        JSONObject jsonObject=JSONObject.parseObject(row_info);
-        Map<String,Object> map=(Map<String,Object>)jsonObject;
-        String searchinfo=map.get("data").toString();
-        List<Role> list=roleService.selectRolename(searchinfo);
-        if(list.size()!=0){
-                result.setPayload("fail");
-        }else{
-            result.setCode(DataSourceEnum.SUCCESS.getCode());
-            result.setMsg(DataSourceEnum.SUCCESS.getMsg());
-            result.setPayload("success");
-        }
-        return result;
-    }
     @RequestMapping("/selectAllLevel")
     public Object selectAllLevel (){
         ControllerResult result = new ControllerResult();
@@ -129,12 +114,9 @@ public class RoleController {
         Map<String,Object> returnmap = new HashMap<>();
         returnmap.put("deptname",dept.getDeptName());
         returnmap.put("deptloc",dept.getDeptLoc());
-
-            result.setCode(DataSourceEnum.SUCCESS.getCode());
-            result.setMsg(DataSourceEnum.SUCCESS.getMsg());
-            result.setPayload(returnmap);
-
-
+        result.setCode(DataSourceEnum.SUCCESS.getCode());
+        result.setMsg(DataSourceEnum.SUCCESS.getMsg());
+        result.setPayload(returnmap);
         return result;
     }
 
@@ -176,64 +158,64 @@ public class RoleController {
        return result;
     }
 
-
     @RequestMapping("/insertinfo")
-    public Object insertinfo (@RequestBody String row_info){
+    public Object insertinfo(@RequestBody String row_info){
         ControllerResult result = new ControllerResult();
         result.setCode(DataSourceEnum.FAIL.getCode());
         result.setMsg(DataSourceEnum.FAIL.getMsg());
         JSONObject jsonObject=JSONObject.parseObject(row_info);
         Map<String,Object> map=(Map<String,Object>)jsonObject;
-        String deptname=map.get("deptname").toString();
-        String deptloc=map.get("deptloc").toString();
-        String rolename=map.get("rolename").toString();
-        String rolefunc=map.get("rolefunc").toString();
-        String level_start=map.get("level_start").toString();
-        String level_end=map.get("level_end").toString();
+        Role role1=roleService.selectByRoleName(map.get("rolename").toString());
         List<String> permissionname=(List<String>) map.get("permissionname");
-
+        int roleid=0;
+        if(role1==null){
+            Role role=new Role();
+            role.setRoleName(map.get("rolename").toString());
+            role.setRoleFunction(map.get("rolefunc").toString());
+            int flag=roleService.insertSelective(role);
+            if(flag==1){
+                roleid=roleService.selectByRoleName(map.get("rolename").toString()).getRoleId();
+            }
+        }else {
+            roleid=role1.getRoleId();
+        }
         Dept dept=new Dept();
-        dept.setDeptLoc(deptloc);
-        dept.setDeptName(deptname);
-        Integer deptid=deptService.getDeptInfo(dept).get(0).getDeptId();
-        Role role=new Role();
-        role.setRoleFunction(rolefunc);
-        role.setRoleName(rolename);
-        int flag=roleService.insertSelective(role);
-        Integer roleid=null;
-        if(flag==1) {
-            roleid = roleService.selectBynameandFunc(role).getRoleId();
+        dept.setDeptName(map.get("deptname").toString());
+        dept.setDeptLoc(map.get("deptloc").toString());
+        Dept dept1=deptService.selectByNameAndLoc(dept);
+        Dept_role dept_role=new Dept_role();
+        dept_role.setDeptId(dept1.getDeptId());
+        dept_role.setRoleId(roleid);
+        Dept_role dept_role1=dept_roleService.selectByRoleandDept(dept_role);
+        if(dept_role1==null){
+            Dept_role deptRole=new Dept_role();
+            deptRole.setRoleId(roleid);
+            deptRole.setDeptId(dept1.getDeptId());
+            boolean flag=dept_roleService.insertSelective(deptRole);
+            if(flag){
+                Dept_role dept_role2=dept_roleService.selectByRoleandDept(deptRole);
+                Integer levelstartid=levelService.selectByLevelname(map.get("level_start").toString()).getLevelId();
+                Integer levelendid=levelService.selectByLevelname(map.get("level_end").toString()).getLevelId();
+                for(int i=levelstartid;i<=levelendid;i++){
+                    Dept_role_level deptRoleLevel=new Dept_role_level();
+                    deptRoleLevel.setDeptRoleId(dept_role2.getId());
+                    deptRoleLevel.setLevelId(i);
+                    levelService.insertSelective(deptRoleLevel);
+                }
+                for(int i=0;i<permissionname.size();i++){
+                    Permission permission=permissionService.selectByPermissionName(permissionname.get(i));
+                    Dept_role_permission dept_role_permission=new Dept_role_permission();
+                    dept_role_permission.setDeptRoleId(dept_role2.getId());
+                    dept_role_permission.setPermissionId(permission.getPermissionId());
+                    dept_role_permissionService.insert(dept_role_permission);
+                }
+            }
+            result.setCode(DataSourceEnum.SUCCESS.getCode());
+            result.setMsg(DataSourceEnum.SUCCESS.getMsg());
+        }else{
+            result.setCode(DataSourceEnum.FAIL.getCode());
+            result.setMsg(DataSourceEnum.FAIL.getMsg());
         }
-        Dept_role deptRole=new Dept_role();
-        deptRole.setDeptId(deptid);
-        deptRole.setRoleId(roleid);
-        int insertrp=deptService.insertSelective(deptRole);
-        Integer dept_role_id=null;
-        if(insertrp==1){
-            dept_role_id=deptService.selectByRoleandDept(deptRole).getId();
-        }
-        Integer levelstartid=levelService.selectByLevelname(level_start).getLevelId();
-        Integer levelendid=levelService.selectByLevelname(level_end).getLevelId();
-        for(int i=levelstartid;i<=levelendid;i++)
-        {
-            Dept_role_level drl=new Dept_role_level();
-            drl.setDeptRoleId(dept_role_id);
-            drl.setLevelId(i);
-            int insertlevel=levelService.insertSelective(drl);
-        }
-
-        for(int j=0;j<permissionname.size();j++){
-            Integer permissionid=permissionService.selectByPermissionName(permissionname.get(j)).getPermissionId();
-            Dept_role_permission drp=new Dept_role_permission();
-            drp.setPermissionId(permissionid);
-            drp.setDeptRoleId(dept_role_id);
-            int insertpermission=permissionService.insertSelective(drp);
-
-        }
-        result.setCode(DataSourceEnum.SUCCESS.getCode());
-        result.setMsg(DataSourceEnum.SUCCESS.getMsg());
-
-
         return result;
     }
 

@@ -47,4 +47,9 @@ public class Dept_roleServiceImpl implements Dept_roleService{
     public int insertSelective(User_dept_role record) {
         return user_dept_roleMapper.insertSelective(record);
     }
+
+    @Override
+    public Dept_role selectByRoleandDept(Dept_role record) {
+        return dept_roleMapper.selectByRoleandDept(record);
+    }
 }

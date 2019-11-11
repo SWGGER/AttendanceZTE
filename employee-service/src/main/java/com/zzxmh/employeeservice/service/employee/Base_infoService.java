@@ -11,4 +11,6 @@ public interface Base_infoService {
     List<Base_info> getAlldatas(Map<String,Object> page);
     int getTotal();
     boolean deleteByPrimaryKey(String userId);
+    List<Map<String,Object>> getfuzzyAlldatas(Map<String,Object> map);
+    int getfuzzyTotal(String searchtext);
 }

@@ -28,6 +28,65 @@
     from base_info
     limit #{pageNumber},#{pageSize}
   </select>
+  <select id="getfuzzyAlldatas" parameterType="java.util.Map" resultType="java.util.Map">
+      SELECT *
+        from(
+        SELECT b.USER_ID,E_NAME,GENDER,
+        (SELECT DEPT_NAME from dept WHERE DEPT_ID IN
+        (SELECT DEPT_ID from dept_role WHERE ID IN
+        (SELECT DEPT_ROLE_ID from user_dept_role WHERE USER_ID=b.USER_ID))) as DEPT_NAME,
+        (SELECT DEPT_LOC from dept WHERE DEPT_ID IN
+        (SELECT DEPT_ID from dept_role WHERE ID IN
+        (SELECT DEPT_ROLE_ID from user_dept_role WHERE USER_ID=b.USER_ID))) as DEPT_LOC,
+        (SELECT ROLE_NAME from role WHERE ROLE_ID IN
+        (select ROLE_ID from dept_role WHERE ID IN
+        (SELECT DEPT_ROLE_ID from user_dept_role WHERE USER_ID=b.USER_ID)))as ROLE_NAME,
+        (SELECT LEVEL_NAME from `level` WHERE LEVEL_ID=b.LEVEL_ID) as LEVEL_NAME
+        FROM base_info as b
+      ) as c
+      WHERE  c.USER_ID LIKE "%"#{searchtext,jdbcType=VARCHAR}"%" OR c.E_NAME LIKE "%"#{searchtext,jdbcType=VARCHAR}"%"
+       OR c.GENDER LIKE "%"#{searchtext,jdbcType=VARCHAR}"%" OR c.DEPT_NAME LIKE "%"#{searchtext,jdbcType=VARCHAR}"%"
+        OR c.DEPT_LOC LIKE "%"#{searchtext,jdbcType=VARCHAR}"%" OR c.ROLE_NAME LIKE "%"#{searchtext,jdbcType=VARCHAR}"%"
+         OR c.LEVEL_NAME LIKE "%"#{searchtext,jdbcType=VARCHAR}"%"
+      LIMIT  #{pageNumber},#{pageSize}
+  </select>
+  <select id="getfuzzyTotal" resultType="java.lang.Integer" parameterType="java.lang.String">
+    SELECT count(*) as total
+        from(
+        SELECT b.USER_ID,E_NAME,GENDER,
+        (SELECT DEPT_NAME from dept WHERE DEPT_ID IN
+        (SELECT DEPT_ID from dept_role WHERE ID IN
+        (SELECT DEPT_ROLE_ID from user_dept_role WHERE USER_ID=b.USER_ID))) as DEPT_NAME,
+        (SELECT DEPT_LOC from dept WHERE DEPT_ID IN
+        (SELECT DEPT_ID from dept_role WHERE ID IN
+        (SELECT DEPT_ROLE_ID from user_dept_role WHERE USER_ID=b.USER_ID))) as DEPT_LOC,
+        (SELECT ROLE_NAME from role WHERE ROLE_ID IN
+        (select ROLE_ID from dept_role WHERE ID IN
+        (SELECT DEPT_ROLE_ID from user_dept_role WHERE USER_ID=b.USER_ID)))as ROLE_NAME,
+        (SELECT LEVEL_NAME from `level` WHERE LEVEL_ID=b.LEVEL_ID) as LEVEL_NAME
+        FROM base_info as b
+      ) as c
+      WHERE  c.USER_ID LIKE "%"#{info,jdbcType=VARCHAR}"%" OR c.E_NAME LIKE "%"#{info,jdbcType=VARCHAR}"%"
+       OR c.GENDER LIKE "%"#{info,jdbcType=VARCHAR}"%" OR c.DEPT_NAME LIKE "%"#{info,jdbcType=VARCHAR}"%"
+        OR c.DEPT_LOC LIKE "%"#{info,jdbcType=VARCHAR}"%" OR c.ROLE_NAME LIKE "%"#{info,jdbcType=VARCHAR}"%"
+         OR c.LEVEL_NAME LIKE "%"#{info,jdbcType=VARCHAR}"%"
+  </select>
+  <select id="getDataByUserID" resultType="java.util.Map" parameterType="java.lang.String">
+    SELECT b.USER_ID,E_NAME,GENDER,
+    (SELECT DEPT_NAME from dept WHERE DEPT_ID IN
+    (SELECT DEPT_ID from dept_role WHERE ID IN
+    (SELECT DEPT_ROLE_ID from user_dept_role WHERE USER_ID=b.USER_ID))) as DEPT_NAME,
+    (SELECT DEPT_LOC from dept WHERE DEPT_ID IN
+    (SELECT DEPT_ID from dept_role WHERE ID IN
+    (SELECT DEPT_ROLE_ID from user_dept_role WHERE USER_ID=b.USER_ID))) as DEPT_LOC,
+    (SELECT ROLE_NAME from role WHERE ROLE_ID IN
+    (select ROLE_ID from dept_role WHERE ID IN
+    (SELECT DEPT_ROLE_ID from user_dept_role WHERE USER_ID=b.USER_ID)))as ROLE_NAME,
+    (SELECT LEVEL_NAME from `level` WHERE LEVEL_ID=b.LEVEL_ID) as LEVEL_NAME
+    FROM base_info as b
+    where USER_ID =#{userId,jdbcType=VARCHAR}
+  </select>
+
   <select id="getTotal" resultType="java.lang.Integer">
     select count(USER_ID) as total
     from base_info

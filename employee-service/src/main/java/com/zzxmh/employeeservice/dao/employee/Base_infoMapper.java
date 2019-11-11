@@ -23,6 +23,12 @@ public interface Base_infoMapper {
     //获取总记录数
     int getTotal();
 
+    //获取模糊查询的信息
+    List<Map<String,Object>> getfuzzyAlldatas(Map<String,Object> map);
+
+    //获取模糊查询总记录数
+    int getfuzzyTotal(String searchtext);
+
     int updateByPrimaryKeySelective(Base_info record);
 
     int updateByPrimaryKey(Base_info record);

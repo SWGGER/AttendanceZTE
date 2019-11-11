@@ -76,4 +76,9 @@ public class DeptServiceImpl implements DeptService {
     public Dept selectDeptId(Dept dept) {
         return deptMapper.selectDeptId(dept);
     }
+
+    @Override
+    public Dept selectByNameAndLoc(Dept record) {
+        return deptMapper.selectByNameAndLoc(record);
+    }
 }

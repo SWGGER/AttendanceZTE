@@ -26,6 +26,7 @@ public interface DeptService {
 
     Dept selectDeptId(Dept dept);
 
-
+    //根据部门名和所在地查询部门信息
+    Dept selectByNameAndLoc(Dept record);
 
 }
