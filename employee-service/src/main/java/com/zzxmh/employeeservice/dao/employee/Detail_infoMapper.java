@@ -14,6 +14,7 @@ public interface Detail_infoMapper {
     //跟很有用user_id查询详细信息
     Detail_info selectByPrimaryKey(String userId);
 
+    //更新detail表的数据
     int updateByPrimaryKeySelective(Detail_info record);
 
     int updateByPrimaryKey(Detail_info record);

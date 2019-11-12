@@ -52,9 +52,4 @@ public class Dept_roleServiceImpl implements Dept_roleService{
     public Dept_role selectByRoleandDept(Dept_role record) {
         return dept_roleMapper.selectByRoleandDept(record);
     }
-
-    @Override
-    public int selLastData() {
-        return dept_roleMapper.selLastData();
-    }
 }

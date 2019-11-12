@@ -79,4 +79,12 @@
       ROLE_ID = #{roleId,jdbcType=INTEGER}
     where ID = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="finddeptroleidbyinfo" parameterType="java.util.Map" resultType="java.lang.Integer">
+    SELECT ID
+    FROM dept_role
+    WHERE DEPT_ID = (SELECT DEPT_ID FROM dept WHERE DEPT_NAME=#{dept_name,jdbcType=INTEGER} AND DEPT_LOC=#{dept_loc,jdbcType=INTEGER})
+                AND ROLE_ID = (SELECT ROLE_ID  FROM role WHERE ROLE_NAME=#{role_name,jdbcType=INTEGER})
+  </select>
+
 </mapper>

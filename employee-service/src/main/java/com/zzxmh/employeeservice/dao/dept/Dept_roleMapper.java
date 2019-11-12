@@ -4,6 +4,7 @@ import com.zzxmh.employeeservice.domain.dept.Dept_role;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public interface Dept_roleMapper {
@@ -25,4 +26,7 @@ public interface Dept_roleMapper {
     int updateByPrimaryKeySelective(Dept_role record);
 
     int updateByPrimaryKey(Dept_role record);
+
+    //根据部门、地区职位获取dept_role_id
+    int finddeptroleidbyinfo(Map<String,Object> map);
 }

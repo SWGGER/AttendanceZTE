@@ -55,4 +55,32 @@ public class Base_infoServiceImpl implements Base_infoService{
     public int getfuzzyTotal(String searchtext) {
         return base_infoMapper.getfuzzyTotal(searchtext);
     }
+
+    @Override
+    public Map<String, Object> getDataByUserID(String userId) {
+        return base_infoMapper.getDataByUserID(userId);
+    }
+
+    @Override
+    public String chechsid(String sid) {
+        return base_infoMapper.chechsid(sid);
+    }
+
+    @Override
+    public List<String> existaddressdeptjob(Map<String, Object> map) {
+        return base_infoMapper.existaddressdeptjob(map);
+    }
+
+    @Override
+    public String findsueridbysid(String sid) {
+        return base_infoMapper.findsueridbysid(sid);
+    }
+
+    @Override
+    public boolean updateByPrimaryKeySelective(Base_info record) {
+        int count=base_infoMapper.updateByPrimaryKeySelective(record);
+        if (count>0)
+            return true;
+        return false;
+    }
 }

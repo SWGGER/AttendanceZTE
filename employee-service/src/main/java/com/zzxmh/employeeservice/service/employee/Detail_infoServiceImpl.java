@@ -32,4 +32,12 @@ public class Detail_infoServiceImpl implements Detail_infoService{
             return true;
         return false;
     }
+
+    @Override
+    public boolean updateByPrimaryKeySelective(Detail_info record) {
+        int count=detail_infoMapper.updateByPrimaryKeySelective(record);
+        if (count>0)
+            return true;
+        return false;
+    }
 }

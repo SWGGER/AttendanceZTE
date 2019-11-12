@@ -3,13 +3,34 @@
   <component name="ChangeListManager">
     <list default="true" id="d896715e-35ae-4b71-8037-9d6be9f3f141" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service.log" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/dept/Dept_roleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/dept/Dept_roleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/employee/Base_infoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/employee/Base_infoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/employee/Detail_infoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/employee/Detail_infoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/user/User_dept_roleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/user/User_dept_roleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/dept/Dept_roleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/dept/Dept_roleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/dept/Dept_roleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/dept/Dept_roleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Detail_infoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Detail_infoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Detail_infoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Detail_infoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/user/User_dept_roleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/user/User_dept_roleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/user/User_dept_roleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/user/User_dept_roleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/resources/mybatis/dept/Dept_roleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/resources/mybatis/dept/Dept_roleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/resources/mybatis/employee/Base_infoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/resources/mybatis/employee/Base_infoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-service/src/main/resources/mybatis/user/User_dept_roleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/employee-service/src/main/resources/mybatis/user/User_dept_roleMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service.log" beforeDir="false" afterPath="$PROJECT_DIR$/user-service.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/DeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/DeptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/dao/dept/Dept_roleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/dao/dept/Dept_roleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/DeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/DeptService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/DeptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/DeptServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_roleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_roleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_roleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_roleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/mybatis/dept/Dept_roleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/mybatis/dept/Dept_roleMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/eureka-server/target/" />
@@ -26,47 +47,49 @@
     <session id="-1431231723">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="3" />
-          <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.20" value="2" />
+          <entry key="project.open.time.21" value="2" />
           <entry key="project.open.time.23" value="1" />
-          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.40" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="207" />
-          <entry key="xml" value="63" />
-          <entry key="yml" value="4" />
+          <entry key="java" value="3556" />
+          <entry key="xml" value="356" />
+          <entry key="yml" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="207" />
-          <entry key="XML" value="63" />
-          <entry key="YAML" value="4" />
+          <entry key="JAVA" value="3556" />
+          <entry key="SQL" value="4" />
+          <entry key="XML" value="352" />
+          <entry key="YAML" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="25" />
-          <entry key="xml" value="8" />
-          <entry key="yml" value="10" />
+          <entry key="java" value="48" />
+          <entry key="xml" value="20" />
+          <entry key="yml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="25" />
-          <entry key="XML" value="8" />
-          <entry key="YAML" value="10" />
+          <entry key="JAVA" value="48" />
+          <entry key="XML" value="20" />
+          <entry key="YAML" value="12" />
         </counts>
       </usages-collector>
     </session>
@@ -171,74 +194,122 @@
         </counts>
       </usages-collector>
     </session>
-    <session id="-1808357822">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="5" />
-          <entry key="xml" value="4" />
-          <entry key="yml" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="5" />
-          <entry key="XML" value="4" />
-          <entry key="YAML" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="169" />
-          <entry key="xml" value="26" />
-          <entry key="yml" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="169" />
-          <entry key="XML" value="26" />
-          <entry key="YAML" value="7" />
-        </counts>
-      </usages-collector>
-    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/controller/EmployeeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8250">
-              <caret line="403" column="9" selection-start-line="403" selection-start-column="9" selection-end-line="403" selection-end-column="9" />
+            <state relative-caret-position="136">
+              <caret line="768" selection-start-line="768" selection-end-line="768" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getDeptName#0;class#EmployeeController#0" />
+                <element signature="method#getAddress#0;class#EmployeeController#0" />
+                <element signature="method#getJob#0;class#EmployeeController#0" />
+                <element signature="method#getLevel#0;class#EmployeeController#0" />
+                <element signature="method#getAlldatas#0;class#EmployeeController#0" />
+                <element signature="method#getfuzzyAlldatas#0;class#EmployeeController#0" />
+                <element signature="method#getBaseInfo#0;class#EmployeeController#0" />
+                <element signature="method#getDetailInfo#0;class#EmployeeController#0" />
+                <element signature="method#judgeSal#0;class#EmployeeController#0" />
+                <element signature="method#checkUserId#0;class#EmployeeController#0" />
+                <element signature="method#generatorExcel#0;class#EmployeeController#0" />
+                <element signature="method#downloadExcel#0;class#EmployeeController#0" />
+                <element signature="method#excelUpload#0;class#EmployeeController#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/DeptController.java">
+        <entry file="file://$PROJECT_DIR$/employee-service/src/main/resources/mybatis/user/User_dept_roleMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="103" column="51" selection-start-line="103" selection-start-column="51" selection-end-line="103" selection-end-column="51" />
+            <state relative-caret-position="196">
+              <caret line="39" column="55" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/mybatis/mybatis-config.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Detail_infoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/application.yml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Detail_infoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="231">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/user/User_dept_roleMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/user/User_dept_roleServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+              <folding>
+                <element signature="e#1438#1439#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/employee/Detail_infoMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/employee/Base_infoMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="17" selection-start-line="17" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+              <folding>
+                <element signature="e#1665#1666#0" expanded="true" />
+                <element signature="e#1727#1728#0" expanded="true" />
+                <element signature="e#1783#1784#0" expanded="true" />
+                <element signature="e#1835#1836#0" expanded="true" />
+                <element signature="e#2047#2048#0" expanded="true" />
+                <element signature="e#2106#2107#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -254,6 +325,18 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>judgeSal</find>
+      <find>selectByPrimaryKey</find>
+      <find>judge</find>
+      <find>null</find>
+      <find>System.out.print</find>
+      <find>sidcheck</find>
+      <find>updateByPrimaryKeySelective</find>
+      <find>System</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -261,16 +344,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/employee-service/src/test/mybatis/generator/generatorConfig.properties" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/user/Userservice.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/dao/user/UserMapper.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/user/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/resources/mybatis/user/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/user-service/pom.xml" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/config/jedis/JedisUtil.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/config/shiro/MyShiroRealm.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/config/shiro/ShiroConfiguration.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/enumeration/DataSourceEnum.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/vo/ControllerResult.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/UserServiceApplication.java" />
@@ -292,26 +365,36 @@
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/RoleService.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/RoleServiceImpl.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/dao/dept/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/employee-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/user-service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_roleService.java" />
+        <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_roleServiceImpl.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/DeptService.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/DeptServiceImpl.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_role_permissionService.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_role_permissionServiceImpl.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/RoleController.java" />
         <option value="$PROJECT_DIR$/employee-service/src/main/resources/mybatis/dept/DeptMapper.xml" />
-        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/employee/Base_infoMapper.java" />
-        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoService.java" />
-        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/employee-service/src/main/resources/mybatis/employee/Base_infoMapper.xml" />
-        <option value="$PROJECT_DIR$/employee-service/pom.xml" />
-        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/resources/mybatis/dept/Dept_roleMapper.xml" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/dao/dept/Dept_roleMapper.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_roleService.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_roleServiceImpl.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/DeptController.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/employee-service/pom.xml" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/tools/ExcelOper.java" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/dept/Dept_roleMapper.java" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/dept/Dept_roleService.java" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/dept/Dept_roleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/resources/mybatis/dept/Dept_roleMapper.xml" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/user/User_dept_roleMapper.java" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/user/User_dept_roleService.java" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/user/User_dept_roleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/resources/mybatis/employee/Base_infoMapper.xml" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoService.java" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/employee/Base_infoMapper.java" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Detail_infoService.java" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/employee/Detail_infoMapper.java" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Detail_infoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/resources/mybatis/user/User_dept_roleMapper.xml" />
+        <option value="$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/controller/EmployeeController.java" />
       </list>
     </option>
   </component>
@@ -324,8 +407,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/Oracle/apache-maven-3.5.0-bin/apache-maven-3.5.0" />
-        <option name="userSettingsFile" value="D:\Oracle\apache-maven-3.5.0-bin\apache-maven-3.5.0\conf\settings.xml" />
+        <option name="mavenHome" value="C:/apache-maven/apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="C:\apache-maven\apache-maven-3.5.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -356,10 +439,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="1386" />
-    <option name="height" value="789" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="438" />
+    <option name="y" value="21" />
+    <option name="width" value="854" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -371,7 +455,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -387,25 +470,20 @@
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -413,7 +491,7 @@
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -422,7 +500,7 @@
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -432,80 +510,118 @@
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="zzxmh" type="462c0819:PsiDirectoryNode" />
-              <item name="userservice" type="462c0819:PsiDirectoryNode" />
+              <item name="employeeservice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="zzxmh" type="462c0819:PsiDirectoryNode" />
-              <item name="userservice" type="462c0819:PsiDirectoryNode" />
+              <item name="employeeservice" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="zzxmh" type="462c0819:PsiDirectoryNode" />
-              <item name="userservice" type="462c0819:PsiDirectoryNode" />
+              <item name="employeeservice" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="zzxmh" type="462c0819:PsiDirectoryNode" />
-              <item name="userservice" type="462c0819:PsiDirectoryNode" />
+              <item name="employeeservice" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="dept" type="462c0819:PsiDirectoryNode" />
+              <item name="employee" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="zzxmh" type="462c0819:PsiDirectoryNode" />
-              <item name="userservice" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="employeeservice" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="zzxmh" type="462c0819:PsiDirectoryNode" />
-              <item name="userservice" type="462c0819:PsiDirectoryNode" />
+              <item name="employeeservice" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="dept" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zzxmh" type="462c0819:PsiDirectoryNode" />
+              <item name="employeeservice" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zzxmh" type="462c0819:PsiDirectoryNode" />
+              <item name="employeeservice" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zzxmh" type="462c0819:PsiDirectoryNode" />
+              <item name="employeeservice" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -513,7 +629,7 @@
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -522,19 +638,66 @@
             <path>
               <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
               <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="mybatis" type="462c0819:PsiDirectoryNode" />
               <item name="dept" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="employee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
+              <item name="employee-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zte-attendance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zte-attendance" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -545,7 +708,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573455163618" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573478662994" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -553,11 +716,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaWorkProjects\zte-attendance\employee-service\src\main\java\com\zzxmh\employeeservice\tools" />
       <recent name="D:\AAAA\zte-attendance\user-service\src\main\resources\static\pages\datasource\image" />
       <recent name="D:\AAAA\zte-attendance\user-service\src\main\resources" />
       <recent name="D:\AAAA\zte-attendance\user-service\src\main\java\com\zzxmh\userservice\controller" />
       <recent name="D:\AAAA\zte-attendance\user-service\src\main\java\com\zzxmh\userservice" />
-      <recent name="D:\AAAA\zte-attendance\user-service\src\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -576,9 +739,9 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.254756" />
+    <option name="contentProportion" value="0.16460587" />
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+  <component name="RunManager" selected="Spring Boot.EmployeeServiceApplication">
     <configuration name="EurekaServerApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="eureka-server" />
       <extension name="coverage">
@@ -691,7 +854,10 @@
       <workItem from="1573109740497" duration="8487000" />
       <workItem from="1573174766580" duration="18506000" />
       <workItem from="1573433937382" duration="4092000" />
-      <workItem from="1573454129418" duration="1063000" />
+      <workItem from="1573439536611" duration="4159000" />
+      <workItem from="1573452780876" duration="18533000" />
+      <workItem from="1573519859991" duration="11050000" />
+      <workItem from="1573538177920" duration="2519000" />
     </task>
     <servers />
   </component>
@@ -704,12 +870,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81028000" />
+    <option name="totallyTimeSpent" value="116234000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34033954" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14599092" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -730,8 +897,8 @@
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.3283859" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="14" sideWeight="0.50444627" visible="true" weight="0.28241563" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.39016393" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="14" sideWeight="0.50444627" visible="true" weight="0.4295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -786,111 +953,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/java/com/zzxmh/eurekaserver/EurekaServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/EmployeeServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/zzxmh/gatewayservice/GatewayServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/UserServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/VerifyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/user/User_dept_roleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/interceptor/LoginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/mybatis/dept/PermissionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2398">
-          <caret line="109" column="19" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/LevelService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/mybatis/dept/Dept_role_levelMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/test/mybatis/generator/generatorConfig.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/dao/dept/Dept_role_levelMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/mybatis/dept/User_dept_roleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="86" column="46" lean-forward="true" selection-start-line="86" selection-start-column="46" selection-end-line="86" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/RouterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154">
-          <caret line="50" column="47" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/dao/dept/User_dept_roleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -898,10 +960,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/employee-service/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="198">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -916,6 +978,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_roleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_roleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="36" column="51" lean-forward="true" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/mybatis/dept/Dept_roleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="70" column="33" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/mybatis/dept/RoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -961,6 +1051,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/mybatis/dept/DeptMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/dao/dept/Dept_roleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/DeptServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -1003,10 +1107,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/employee-service/src/main/resources/mybatis/user/UserMapper.xml">
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_role_permissionServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="52" lean-forward="true" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+        <state relative-caret-position="179">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -1014,34 +1118,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
           <caret line="136" column="11" selection-start-line="129" selection-start-column="2" selection-end-line="136" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="55" column="55" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/employee-service/src/main/resources/mybatis/employee/Base_infoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="85" column="23" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/employee/Base_infoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="29" column="41" selection-start-line="25" selection-start-column="4" selection-end-line="29" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1054,92 +1130,198 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/RoleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="171" column="27" selection-start-line="171" selection-start-column="27" selection-end-line="171" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/employee-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1013">
-          <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/controller/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8250">
-          <caret line="403" column="9" selection-start-line="403" selection-start-column="9" selection-end-line="403" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/mybatis/dept/DeptMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2760">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/mybatis/dept/RoleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="126" column="11" lean-forward="true" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/mybatis/dept/Dept_roleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_roleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-          <folding>
-            <element signature="e#1629#1630#0" expanded="true" />
-            <element signature="e#1653#1654#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/dao/dept/Dept_roleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_role_permissionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/service/dept/Dept_roleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        <state relative-caret-position="-3">
+          <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/controller/DeptController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="103" column="51" selection-start-line="103" selection-start-column="51" selection-end-line="103" selection-end-column="51" />
+        <state relative-caret-position="216">
+          <caret line="89" column="14" lean-forward="true" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/mybatis/mybatis-config.xml">
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/zzxmh/userservice/UserServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/tools/YYJHTools.java" />
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/tools/ExcelOper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/resources/mybatis/mybatis-config.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/resources/mybatis/user/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="380">
+          <caret line="20" column="52" lean-forward="true" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/dept/Dept_roleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/dept/Dept_roleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/dept/Dept_roleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/user/User_dept_roleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/resources/mybatis/dept/Dept_roleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1558">
+          <caret line="82" column="95" selection-start-line="82" selection-start-column="95" selection-end-line="82" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/resources/mybatis/employee/Base_infoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="188" column="41" selection-start-line="188" selection-start-column="14" selection-end-line="188" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/employee/Base_infoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="17" selection-start-line="17" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Base_infoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+          <folding>
+            <element signature="e#1665#1666#0" expanded="true" />
+            <element signature="e#1727#1728#0" expanded="true" />
+            <element signature="e#1783#1784#0" expanded="true" />
+            <element signature="e#1835#1836#0" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2106#2107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/employee/Detail_infoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Detail_infoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/employee/Detail_infoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/service/user/User_dept_roleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#1438#1439#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/dao/user/User_dept_roleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/resources/mybatis/user/User_dept_roleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="39" column="55" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee-service/src/main/java/com/zzxmh/employeeservice/controller/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="768" selection-start-line="768" selection-end-line="768" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getDeptName#0;class#EmployeeController#0" />
+            <element signature="method#getAddress#0;class#EmployeeController#0" />
+            <element signature="method#getJob#0;class#EmployeeController#0" />
+            <element signature="method#getLevel#0;class#EmployeeController#0" />
+            <element signature="method#getAlldatas#0;class#EmployeeController#0" />
+            <element signature="method#getfuzzyAlldatas#0;class#EmployeeController#0" />
+            <element signature="method#getBaseInfo#0;class#EmployeeController#0" />
+            <element signature="method#getDetailInfo#0;class#EmployeeController#0" />
+            <element signature="method#judgeSal#0;class#EmployeeController#0" />
+            <element signature="method#checkUserId#0;class#EmployeeController#0" />
+            <element signature="method#generatorExcel#0;class#EmployeeController#0" />
+            <element signature="method#downloadExcel#0;class#EmployeeController#0" />
+            <element signature="method#excelUpload#0;class#EmployeeController#0" />
+          </folding>
         </state>
       </provider>
     </entry>

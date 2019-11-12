@@ -16,18 +16,28 @@
   <sql id="Base_Column_List" >
     USER_ID, E_NAME, EMAIL, TEL, SID, NATION, LIVE_CITY, GENDER, SAL, LEVEL_ID
   </sql>
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
     from base_info
     where USER_ID = #{userId,jdbcType=VARCHAR}
   </select>
+
+    <select id="chechsid" resultType="java.lang.String" parameterType="java.lang.String" >
+    select SID
+    from base_info
+    where SID = #{sid,jdbcType=VARCHAR}
+  </select>
+
+
   <select id="getAlldatas" resultMap="BaseResultMap" parameterType="java.util.Map">
     select
     <include refid="Base_Column_List" />
     from base_info
     limit #{pageNumber},#{pageSize}
   </select>
+
   <select id="getfuzzyAlldatas" parameterType="java.util.Map" resultType="java.util.Map">
       SELECT *
         from(
@@ -50,6 +60,7 @@
          OR c.LEVEL_NAME LIKE "%"#{searchtext,jdbcType=VARCHAR}"%"
       LIMIT  #{pageNumber},#{pageSize}
   </select>
+
   <select id="getfuzzyTotal" resultType="java.lang.Integer" parameterType="java.lang.String">
     SELECT count(*) as total
         from(
@@ -71,6 +82,7 @@
         OR c.DEPT_LOC LIKE "%"#{info,jdbcType=VARCHAR}"%" OR c.ROLE_NAME LIKE "%"#{info,jdbcType=VARCHAR}"%"
          OR c.LEVEL_NAME LIKE "%"#{info,jdbcType=VARCHAR}"%"
   </select>
+
   <select id="getDataByUserID" resultType="java.util.Map" parameterType="java.lang.String">
     SELECT b.USER_ID,E_NAME,GENDER,
     (SELECT DEPT_NAME from dept WHERE DEPT_ID IN
@@ -91,10 +103,12 @@
     select count(USER_ID) as total
     from base_info
   </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from base_info
     where USER_ID = #{userId,jdbcType=VARCHAR}
   </delete>
+
   <insert id="insert" parameterType="com.zzxmh.employeeservice.domain.employee.Base_info" >
     insert into base_info (USER_ID, E_NAME, EMAIL, 
       TEL, SID, NATION, LIVE_CITY, 
@@ -103,6 +117,7 @@
       #{tel,jdbcType=VARCHAR}, #{sid,jdbcType=VARCHAR}, #{nation,jdbcType=VARCHAR}, #{liveCity,jdbcType=VARCHAR}, 
       #{gender,jdbcType=CHAR}, #{sal,jdbcType=DOUBLE}, #{levelId,jdbcType=INTEGER})
   </insert>
+
   <insert id="insertSelective" parameterType="com.zzxmh.employeeservice.domain.employee.Base_info" >
     insert into base_info
     <trim prefix="(" suffix=")" suffixOverrides="," >
@@ -170,6 +185,7 @@
       </if>
     </trim>
   </insert>
+
   <update id="updateByPrimaryKeySelective" parameterType="com.zzxmh.employeeservice.domain.employee.Base_info" >
     update base_info
     <set >
@@ -203,6 +219,7 @@
     </set>
     where USER_ID = #{userId,jdbcType=VARCHAR}
   </update>
+
   <update id="updateByPrimaryKey" parameterType="com.zzxmh.employeeservice.domain.employee.Base_info" >
     update base_info
     set E_NAME = #{eName,jdbcType=VARCHAR},
@@ -216,4 +233,32 @@
       LEVEL_ID = #{levelId,jdbcType=INTEGER}
     where USER_ID = #{userId,jdbcType=VARCHAR}
   </update>
+
+    <select id="existaddressdeptjob" parameterType="java.util.Map" resultType="java.lang.String">
+    SELECT LEVEL_NAME
+	from `level`
+	WHERE LEVEL_ID IN
+	(
+		SELECT LEVEL_ID
+		FROM dept_role_level
+		WHERE DEPT_ROLE_ID = (
+				SELECT ID
+				from dept_role
+				WHERE ROLE_ID = (
+						SELECT ROLE_ID
+						FROM role
+						WHERE ROLE_NAME=#{job,jdbcType=VARCHAR})
+					AND
+						DEPT_ID = (
+							SELECT DEPT_ID
+							from dept
+							WHERE DEPT_NAME = #{dept,jdbcType=VARCHAR} AND DEPT_LOC=#{address,jdbcType=VARCHAR})) )
+    </select>
+
+  <select id="findsueridbysid" parameterType="java.lang.String" resultType="java.lang.String">
+    SELECT USER_ID
+    FROM base_info
+    WHERE SID = #{sid,jdbcType=VARCHAR}
+  </select>
+
 </mapper>

@@ -34,4 +34,20 @@
       ENTRY_TIME = #{entryTime,jdbcType=TIMESTAMP}
     where ID = #{id,jdbcType=INTEGER}
   </update>
+
+  <update id="updatebatchinfo" parameterType="java.util.Map">
+    update user_dept_role
+    set DEPT_ROLE_ID= #{newdeptRoleId,jdbcType=INTEGER}
+    WHERE USER_ID=#{userId,jdbcType=VARCHAR} and DEPT_ROLE_ID = #{olddeptRoleId,jdbcType=INTEGER}
+  </update>
+
+  <select id="batcholddeptroleid" resultType="java.lang.Integer" parameterType="java.lang.String">
+    SELECT DEPT_ROLE_ID
+    from user_dept_role
+    WHERE USER_ID=#{userId,jdbcType=VARCHAR}
+    GROUP BY ENTRY_TIME
+    ORDER BY ENTRY_TIME ASC
+    LIMIT 1
+  </select>
+  
 </mapper>

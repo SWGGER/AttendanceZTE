@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 @Primary
@@ -33,5 +34,18 @@ public class User_dept_roleServiceImpl implements User_dept_roleService {
         if (count>0)
             return true;
         return false;
+    }
+
+    @Override
+    public boolean updatebatchinfo(Map<String, Object> map) {
+        int count = user_dept_roleMapper.updatebatchinfo(map);
+        if (count>0)
+            return true;
+        return false;
+    }
+
+    @Override
+    public int batcholddeptroleid(String userid) {
+        return user_dept_roleMapper.batcholddeptroleid(userid);
     }
 }

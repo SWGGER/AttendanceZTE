@@ -6,4 +6,5 @@ public interface Detail_infoService {
     boolean insertSelective(Detail_info record);
     Detail_info selectByPrimaryKey(String userId);
     boolean deleteByPrimaryKey(String userId);
+    boolean updateByPrimaryKeySelective(Detail_info record);
 }

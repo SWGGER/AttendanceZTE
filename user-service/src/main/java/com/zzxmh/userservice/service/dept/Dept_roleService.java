@@ -15,6 +15,4 @@ public interface Dept_roleService {
     int insertSelective(User_dept_role record);
 
     Dept_role selectByRoleandDept(Dept_role record);
-
-    int  selLastData();
 }

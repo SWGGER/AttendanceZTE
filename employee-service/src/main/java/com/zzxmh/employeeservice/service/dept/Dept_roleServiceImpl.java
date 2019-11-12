@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 @Primary
@@ -27,5 +28,10 @@ public class Dept_roleServiceImpl implements Dept_roleService{
     @Override
     public Dept_role selectByPrimaryKey(int id) {
         return dept_roleMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public int finddeptroleidbyinfo(Map<String, Object> map) {
+        return dept_roleMapper.finddeptroleidbyinfo(map);
     }
 }
