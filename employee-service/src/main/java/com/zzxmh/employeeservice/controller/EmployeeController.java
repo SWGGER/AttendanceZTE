@@ -497,7 +497,7 @@ public class EmployeeController {
 
     //查看导入excel文件格式
     @RequestMapping("/excelimport")
-    public Object excelUpload(@RequestParam("excel_upload") MultipartFile[] files) throws IOException {
+    public Object excelUpload(@RequestParam("userinfo_upload") MultipartFile[] files) throws IOException {
         Map<String,Object> map=new HashMap<>();
         if(null !=files && files.length!=0){
             List<Map<String, Object>> remap = ExcelOper.translateExcels(files);
@@ -605,7 +605,6 @@ public class EmployeeController {
 
         //code == 0 代表所有文件格式正确
         map.put("code",0);
-        boolean checksidflag = true;
         boolean insertsidflag = true;
         List<Map<String, Object>> rechecklist = new ArrayList<>();
         if(null !=files && files.length!=0){
@@ -618,7 +617,13 @@ public class EmployeeController {
                     for(Map<String, Object> map1:rows){
 
                         String sidcheck = base_infoService.chechsid(map1.get("sid").toString());
+
+                        System.out.println("-----------------------------");
+                        System.out.println(sidcheck);
+                        System.out.println("-----------------------------");
+
                         if(sidcheck==null){
+
                             //正确,直接插入
 
                             Map<String,Object> dept=map1;
@@ -696,7 +701,6 @@ public class EmployeeController {
                                 insertsidflag = false;
                             }
                         }else{
-                            checksidflag = false;
                             String userid = base_infoService.findsueridbysid(map1.get("sid").toString());
                             map1.put("userid",userid);
                             rechecklist.add(map1);
@@ -711,10 +715,8 @@ public class EmployeeController {
         }else{
             map.put("insertsid",-1);
         }
+        map.put("rechecklist",rechecklist);
 
-        if(rechecklist.size() > 0){
-            map.put("rechecklist",rechecklist);
-        }
         return map;
     }
 
